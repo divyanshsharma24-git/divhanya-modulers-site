@@ -485,43 +485,45 @@ export default function Home() {
                 </p>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4 group">
-                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
-                      <img src={iitjLogo} alt="IITJ" className="w-4 h-4 object-contain" />
+                  <div className="flex items-center gap-5 group">
+                    <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
+                      <img src={iitjLogo} alt="IITJ" className="w-5 h-5 object-contain" />
                     </div>
-                    <div>
-                      <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur</span>
-                      <div className="mt-4 space-y-4">
-                        <div className="flex items-start gap-4 group/sub">
-                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
-                            <img src={quantumLogo} alt="Quantum" className="w-4 h-4 object-contain" />
-                          </div>
-                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Masters In Quantum Mechanics, Delhi</span>
-                        </div>
-                        <div className="flex items-start gap-4 group/sub">
-                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
-                            <img src={microsoftLogo} alt="Microsoft" className="w-4 h-4 object-contain" />
-                          </div>
-                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Microsoft AI Intern Workshop</span>
-                        </div>
-                        <div className="flex items-start gap-4 group/sub">
-                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
-                            <Check className="w-4 h-4 text-cyan-400" />
-                          </div>
-                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Multi-time hackathon winner representing IIT Alumni</span>
-                        </div>
+                    <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur</span>
+                  </div>
+
+                  <div className="space-y-5 ml-[52px]">
+                    <div className="flex items-center gap-5 group/sub">
+                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
+                        <img src={quantumLogo} alt="Quantum" className="w-5 h-5 object-contain" />
                       </div>
+                      <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Masters In Quantum Mechanics, Delhi</span>
+                    </div>
+
+                    <div className="flex items-center gap-5 group/sub">
+                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
+                        <img src={microsoftLogo} alt="Microsoft" className="w-5 h-5 object-contain" />
+                      </div>
+                      <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Microsoft AI Intern Workshop</span>
+                    </div>
+
+                    <div className="flex items-center gap-5 group/sub">
+                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center">
+                        <Check className="w-5 h-5 text-cyan-400" />
+                      </div>
+                      <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Multi-time hackathon winner representing IIT Alumni</span>
                     </div>
                   </div>
+
                   {[
                     "Advanced Diploma in Computer Applications",
                     "Course on Computer Concepts (CCC)",
                     "Applicable Uses of Professional AI Tools",
                     "ISRO Space Awareness Certificate"
                   ].map((cert, idx) => (
-                    <div key={idx} className="flex items-start gap-4 group">
-                      <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
-                        <Check className="w-4 h-4 text-cyan-400" />
+                    <div key={idx} className="flex items-center gap-5 group">
+                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center">
+                        <Check className="w-5 h-5 text-cyan-400" />
                       </div>
                       <span className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">{cert}</span>
                     </div>
