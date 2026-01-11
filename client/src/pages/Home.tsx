@@ -25,7 +25,10 @@ import {
   Rocket,
   Maximize2,
   Users,
-  Send
+  Send,
+  Linkedin,
+  Twitter,
+  Instagram
 } from "lucide-react";
 import logoImg from "@assets/image_1768131702952.png";
 import founderImg from "@assets/image_1768131693800.png";
