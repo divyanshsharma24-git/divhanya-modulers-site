@@ -33,6 +33,21 @@ import founderImg from "@assets/image_1768131693800.png";
 export default function Home() {
   const [showHelpdesk, setShowHelpdesk] = useState(false);
   const [showChat, setShowChat] = useState(false);
+  const [chatInput, setChatInput] = useState("");
+  const [messages, setMessages] = useState([
+    { role: "bot", content: "Hi 👋 I'm Divhanya AI. I help businesses automate bookings, leads and revenue systems. What type of business do you run?" },
+    { role: "bot", content: "Hi 👋 I’m Divhanya AI Assistant. I help businesses automate bookings, leads and revenue systems. To help you best, I’ll just ask a few quick questions:\n\n1️⃣ What type of business do you run? (e.g. salon, clinic, coaching, real estate, agency, etc.)\n2️⃣ On average, how many enquiries or leads do you get per month?\n3️⃣ What's your best contact number (with country code)?\n4️⃣ What's the main problem you're facing right now? (missed calls / no bookings / low leads / slow follow-ups / something else?)" }
+  ]);
+
+  const handleSendMessage = () => {
+    if (!chatInput.trim()) return;
+    setMessages(prev => [...prev, { role: "user", content: chatInput }]);
+    setChatInput("");
+    // Simulate bot response
+    setTimeout(() => {
+      setMessages(prev => [...prev, { role: "bot", content: "Thank you for the information! Our automation specialist will contact you shortly." }]);
+    }, 1000);
+  };
 
   // Animations variants
   const fadeInUp = {
@@ -315,9 +330,9 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-5 relative group"
+              className="lg:col-span-6 relative group"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-[4/5] bg-zinc-900">
+              <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-square bg-zinc-900">
                 <img 
                   src={founderImg} 
                   alt="Divyansh Sharma" 
@@ -329,11 +344,11 @@ export default function Home() {
                   <p className="text-secondary font-medium text-xs tracking-[0.2em] mt-1 uppercase">Founder & Lead Architect</p>
                 </div>
                 {/* Decorative Frame Elements */}
-                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-secondary/50 rounded-tl-lg"></div>
-                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-secondary/50 rounded-br-lg"></div>
+                <div className="absolute top-4 left-4 w-12 h-12 border-t border-l border-primary/40 rounded-tl-xl"></div>
+                <div className="absolute bottom-4 right-4 w-12 h-12 border-b border-r border-primary/40 rounded-br-xl"></div>
               </div>
               {/* Glow behind image */}
-              <div className="absolute -inset-4 bg-secondary/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+              <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
             </motion.div>
 
             {/* Content Column */}
@@ -342,7 +357,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-7"
+              className="lg:col-span-6"
             >
               <div className="mb-8">
                 <div className="text-primary text-6xl font-serif mb-4">“</div>
@@ -482,45 +497,36 @@ export default function Home() {
                   <button onClick={() => setShowChat(false)} className="text-white/30 hover:text-white"><X className="w-4 h-4" /></button>
                 </div>
               </div>
-              <div className="flex-1 p-6 overflow-y-auto space-y-6 bg-black">
-                <div className="flex flex-col gap-4">
-                  <div className="bg-zinc-800/50 p-4 rounded-2xl rounded-tl-none max-w-[90%] text-sm text-gray-200 leading-relaxed border border-white/5">
-                    Hi 👋 I'm Divhanya AI. I help businesses automate bookings, leads and revenue systems. What type of business do you run?
-                  </div>
-                  
-                  <div className="flex justify-end">
-                    <div className="bg-primary p-3 rounded-xl rounded-tr-none text-xs font-bold text-black min-w-[40px] text-center">
-                      22
+              <div className="flex-1 p-6 overflow-y-auto space-y-6 bg-black scrollbar-hide">
+                <div className="flex flex-col gap-6">
+                  {messages.map((msg, idx) => (
+                    <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`${
+                        msg.role === 'user' 
+                          ? 'bg-primary p-3 rounded-xl rounded-tr-none text-xs font-bold text-black min-w-[40px] text-center' 
+                          : 'bg-zinc-800/50 p-5 rounded-2xl rounded-tl-none max-w-[95%] text-sm text-gray-200 leading-relaxed border border-white/5 shadow-xl'
+                      }`}>
+                        {msg.content.split('\n').map((line, i) => (
+                          <p key={i} className={i > 0 ? "mt-2" : ""}>{line}</p>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="bg-zinc-800/50 p-5 rounded-2xl rounded-tl-none max-w-[95%] text-sm text-gray-200 leading-relaxed border border-white/5">
-                    <p className="mb-4">Hi 👋 I’m Divhanya AI Assistant. I help businesses automate bookings, leads and revenue systems. To help you best, I’ll just ask a few quick questions:</p>
-                    <ul className="space-y-3">
-                      <li className="flex gap-2">
-                        <span className="bg-primary/20 text-primary px-1.5 rounded h-fit">1</span>
-                        <span>What type of business do you run? (e.g. salon, clinic, coaching, real estate, agency, etc.)</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="bg-primary/20 text-primary px-1.5 rounded h-fit">2</span>
-                        <span>On average, how many enquiries or leads do you get per month?</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="bg-primary/20 text-primary px-1.5 rounded h-fit">3</span>
-                        <span>What's your best contact number (with country code)?</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="bg-primary/20 text-primary px-1.5 rounded h-fit">4</span>
-                        <span>What's the main problem you're facing right now? (missed calls / no bookings / low leads / slow follow-ups / something else?)</span>
-                      </li>
-                    </ul>
-                  </div>
+                  ))}
                 </div>
               </div>
               <div className="p-4 bg-zinc-900/50 border-t border-white/5">
                 <div className="flex gap-2 bg-black rounded-lg border border-white/10 p-2">
-                  <input className="flex-1 bg-transparent px-2 py-1 text-sm text-white focus:outline-none placeholder:text-gray-600" placeholder="Type your requirements..." />
-                  <button className="p-2 bg-primary/20 text-primary rounded-md hover:bg-primary/30 transition-colors">
+                  <input 
+                    className="flex-1 bg-transparent px-2 py-1 text-sm text-white focus:outline-none placeholder:text-gray-600" 
+                    placeholder="Type your requirements..." 
+                    value={chatInput}
+                    onChange={(e) => setChatInput(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
+                  />
+                  <button 
+                    onClick={handleSendMessage}
+                    className="p-2 bg-primary/20 text-primary rounded-md hover:bg-primary/30 transition-colors"
+                  >
                     <Send className="w-4 h-4" />
                   </button>
                 </div>
