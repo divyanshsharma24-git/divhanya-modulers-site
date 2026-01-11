@@ -1,0 +1,198 @@
+🧠 ABOUT THE FOUNDER SECTION
+
+Title:
+
+Meet Our Founder — Divyansh Sharma
+
+Place founder photo (in black suit) with elegant frame and short bio:
+
+Include credentials (exact from LinkedIn):
+
+✔ Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur
+✔ Advanced Diploma in Computer Applications
+✔ Course on Computer Concepts (CCC)
+✔ Applicable Uses of Professional AI Tools
+✔ ISRO Space Awareness Certificate
+
+Add short story:
+
+Divyansh leads with vision to simplify automation — turning complex workflows into revenue generators for small and medium businesses.
+
+Add animation and hover effects.
+
+🎨 UI / EXPERIENCE SPECIFIC NOTES
+
+Use gradient neon highlights
+
+Interactive hover micro-animations
+
+3D depth layers
+
+Fluid scroll transitions
+
+Live UI elements showing performance cards
+
+Parallax background subtle
+
+Sticky minimal navbar
+
+Make homepage feel like premium SaaS + enterprise UX.
+
+🧠 AI / AUTOMATION-SPECIFIC FEATURES (for prompts to generator)
+
+Include sections such as:
+
+Smart Flow Visualizer
+Show animated flow from lead → CRM → WhatsApp → follow-up → conversion.
+
+Performance Dashboard Preview
+Simulated analytics cards (real-time Ui feel).
+
+Chatbot Preview UI
+Interactive chatbot in lower right corner.
+
+FAQ Assistant
+Auto-suggested answers with typed animation.
+
+🎯 UX GOALS
+
+✔ Clear value positioning
+✔ Persuasive conversion copy
+✔ Minimal cognitive load
+✔ Trust through credentials
+✔ Multichannel contact options
+✔ Emotional reassurance (“We handle your headaches”)
+✔ Future-ready UI experience
+
+📌 FINAL INSTRUCTIONS FOR AI / WEB GENERATOR
+
+Must load fast
+
+Mobile-first optimized
+
+Animations not intrusive
+
+UI feels premium & dynamic
+
+Copy must be concise, clear, high-converting
+
+
+
+
+Use the uploaded logo as the main brand identity in the navbar and footer.
+Use the uploaded founder photo in the ‘About the Founder’ section with premium glassmorphism frame.
+
+
+FAQ + Helpdesk + AI Assistant Module
+
+Design a dedicated support layer consisting of:
+
+📌 FAQ Section
+
+Accordion-style expandable blocks
+
+Smart grouping:
+
+Getting Started
+
+Pricing & Packages
+
+Automation & Workflow
+
+Support & Onboarding
+
+Add search bar to filter questions dynamically.
+
+🧑‍💻 Helpdesk Panel
+
+Floating “Need Help?” button on every page.
+
+Opens a slide-in helpdesk panel with:
+
+WhatsApp direct connect
+
+Email support form
+
+Booking link for free consultation
+
+🤖 AI Chat Assistant
+
+Add a persistent AI chat widget in bottom-right corner:
+
+Bot name: Divhanya AI Assistant
+Capabilities:
+
+Answer service questions
+
+Recommend best plan
+
+Collect:
+
+Business type
+
+Contact number
+
+Problem description
+
+Push lead data into backend Google Sheet / CRM.
+
+UX:
+
+Typed animation
+
+Soft neon border glow
+
+Minimal Jarvis-style interface
+
+
+FAQ SECTION (Accordion Style)
+
+Q: What makes Divhanya Modulers different?
+A: We do not sell tech — we deliver measurable revenue systems.
+
+Q: Do you handle everything?
+A: Yes. Frontend, backend, automations, CRM, WhatsApp workflows — fully managed.
+
+Q: Who is this for?
+A: Hotels, clinics, dentists, MSMEs, service firms, coaching institutes.
+
+Q: How soon can I see results?
+A: Typically within 7–14 days.
+
+Q: Is there onboarding support?
+A: Yes, free audit + guided setup.
+
+HELP DESK MODULE
+
+Floating “Need Help?” button:
+• WhatsApp connect
+• Email form
+• Free consultation booking
+
+🤖 AI CHAT ASSISTANT SCRIPT
+
+Name: Divhanya AI Assistant
+
+Greeting:
+“Hi 👋 I’m Divhanya AI. I help businesses automate bookings, leads and revenue systems. What type of business do you run?”
+
+Flow:
+
+Ask Business Type
+
+Ask Monthly Enquiries
+
+Ask Contact Number
+
+Ask Problem (missed calls / no bookings / low leads)
+
+Close:
+“Thank you! Our automation specialist will contact you shortly.”
+
+
+
+
+
+
+
+“All uploaded images must be used contextually — logo in navbar & footer, founder photo in About section — with premium UI treatment and optimized loading.”

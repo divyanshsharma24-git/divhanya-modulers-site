@@ -1,0 +1,174 @@
+MASTER PROMPT FOR AI / WEB DESIGNER — DIVHANYA MODULERS WEBSITE
+🧠 OVERVIEW INSTRUCTIONS
+
+Generate a futuristic, high-end, ultra-modern front-end website with live interactive UI elements, motion graphics, and a cutting-edge experience inspired by interfaces like Ferrari, Iron-Man Jarvis / Stark UI, Tesla web presence, and premium SaaS dashboards. The UI should be smooth, premium, sleek, 3D-inspired, with gradient lighting, fluid transitions, and intelligent animations.
+Design must be responsive for mobile, tablet, and desktop with pixel-perfect attention to detail.
+
+The website must clearly communicate the brand identity, services, pricing, automation intelligence, founder credentials, contact pathways, chatbot/FAQ assistance, and conversion pathways for small and medium businesses (hotels, resorts, doctors, clinics, dentists, MSMEs, service firms).
+Do not generate generic blocks — aim for bespoke content with persuasive copy that converts visitors into leads.
+
+Incorporate the visual assets provided:
+📸 Founder photo (Divyansh Sharma in black suit)
+📛 Company logo
+Use them tastefully in hero sections and about/trust sections.
+
+Brand & visual theme:
+🖤 sleek dark + neon accent
+⚡ gradient motion UI
+✨ premium interactive feel
+📊 clear visual hierarchy & 3D touches
+
+Tone: professional, authoritative, confident, intelligent — not salesy.
+Audience: business decision makers, not consumers.
+
+🧩 WEBSITE STRUCTURE & CONTENT
+
+Design the site with the following section hierarchy and functional specifications:
+
+1️⃣ Hero Section
+
+Main Headline (big, bold):
+
+“Divhanya Modulers — AI Automations & Technologies”
+Intelligent Revenue-Driven Automations for Small & Medium Businesses
+
+Sub-Headline:
+
+We do not sell software.
+We deliver full-stack revenue systems that automate bookings, lead conversions, follow-ups, workflows, CRM, and digital conversions with zero headaches — empowering businesses to grow effortlessly.
+
+Hero Visual:
+
+Ultra-modern animated UI resembling futuristic dashboards (live data UI)
+
+Subtle 3D visual or animation of connected nodes/flows representing automation
+
+Include founder photo and company logo integrated into UI
+
+Primary CTA Buttons:
+
+“Book a Growth Audit”
+
+“See Services”
+
+(Sticky) WhatsApp / Contact CTA
+
+2️⃣ Sticky Navigation
+
+Include:
+
+Home
+
+Services
+
+How It Works
+
+Pricing
+
+FAQ
+
+About
+
+Contact
+
+Floating WhatsApp button with pulsating animation.
+
+3️⃣ WHAT WE DO — Core Services Section
+
+Design this section as a modern scroll-triggered reveal with icons and short explanatory copy. Use subtle motion transitions.
+
+Headline:
+
+What We Provide — Intelligent Automation & Revenue Systems
+
+Describe the main value proposition:
+
+Divhanya Modulers builds end-to-end automated revenue systems, not just websites or tools. We install fully operational infrastructure that captures leads, automates follow-ups, recovers missed revenue opportunities, and continuously improves performance.
+
+🟦 SERVICES BLOCKS — Each service should have:
+
+Title
+
+Description (what problem it solves)
+
+Visual / icon / micro-animation
+
+Target industry
+
+Pricing (starter → pro)
+
+Service #1: Direct Booking Revenue Infrastructure
+
+Title:
+Direct Booking Revenue System — for Hotels & Resorts
+
+What It Is:
+A mobile-first direct booking page connected to automation backend — bookings via form, WhatsApp, call, plus conversion UX elements.
+
+Includes:
+✔ Interactive mobile-friendly booking UI
+✔ Live offers & seasonal pricing blocks
+✔ Click-to-WhatsApp + call triggers
+✔ Service + Amenity highlights
+✔ Guest trust blocks & reviews
+✔ Backend automation connected to workflows
+
+Problem Solved:
+Hotels lose 20–40% revenue to third-party platforms. We bring direct bookings home.
+
+Pricing:
+
+Starter: ₹4,500 / month
+
+Growth: ₹7,000 / month
+
+Enterprise: ₹10,000 / month
+
+Service #2: WhatsApp & Chat Automation
+
+Title:
+WhatsApp & Chat Workflow Automation
+
+What It Is:
+Automated conversation flows, instant replies, enquiry categorization, follow-ups, booking confirmations, reminders.
+
+Includes:
+✔ Smart auto-replies
+✔ Quick replies for prices/availability
+✔ Missed-call WhatsApp triggers
+✔ Chat history CRM sync
+
+Industries:
+Hotels, Clinics, Doctors, Dentists, Service Firms
+
+Problem Solved:
+Businesses miss inquiries due to slow replies.
+
+Pricing:
+
+Starter: ₹3,500 / month
+
+Growth: ₹6,000 / month
+
+Service #3: CRM & Lead Capture Backends
+
+Title:
+Lead Capture & CRM Systems (No Headaches)
+
+What It Is:
+Google Sheets or lightweight CRM backend that tracks every lead source — forms, calls, WhatsApp, landing pages — with notification triggers and status tracking.
+
+Includes:
+✔ Real-time updates
+✔ Lead scoring & tagging
+✔ Status & follow-up timestamps
+✔ Weekly performance reports
+
+Problem Solved:
+Leads slip through cracks → lost revenue.
+
+Pricing:
+
+Starter: ₹3,000 / month
+
+Growth: ₹5,000 / month
