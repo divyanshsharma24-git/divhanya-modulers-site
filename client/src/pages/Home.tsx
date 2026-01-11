@@ -35,18 +35,34 @@ export default function Home() {
   const [showChat, setShowChat] = useState(false);
   const [chatInput, setChatInput] = useState("");
   const [messages, setMessages] = useState([
-    { role: "bot", content: "Hi 👋 I'm Divhanya AI. I help businesses automate bookings, leads and revenue systems. What type of business do you run?" },
     { role: "bot", content: "Hi 👋 I’m Divhanya AI Assistant. I help businesses automate bookings, leads and revenue systems. To help you best, I’ll just ask a few quick questions:\n\n1️⃣ What type of business do you run? (e.g. salon, clinic, coaching, real estate, agency, etc.)\n2️⃣ On average, how many enquiries or leads do you get per month?\n3️⃣ What's your best contact number (with country code)?\n4️⃣ What's the main problem you're facing right now? (missed calls / no bookings / low leads / slow follow-ups / something else?)" }
   ]);
 
   const handleSendMessage = () => {
     if (!chatInput.trim()) return;
-    setMessages(prev => [...prev, { role: "user", content: chatInput }]);
+    const userMsg = chatInput;
+    setMessages(prev => [...prev, { role: "user", content: userMsg }]);
     setChatInput("");
-    // Simulate bot response
+
+    // Smarter Scripted Response Logic
     setTimeout(() => {
-      setMessages(prev => [...prev, { role: "bot", content: "Thank you for the information! Our automation specialist will contact you shortly." }]);
-    }, 1000);
+      let botResponse = "";
+      const input = userMsg.toLowerCase();
+      
+      if (input.includes("hotel") || input.includes("resort")) {
+        botResponse = "Excellent. We specialize in Direct Booking Revenue Systems for hotels. This typically recovers 20-40% of revenue lost to OTAs. Would you like to see a demo of our mobile-first booking UI?";
+      } else if (input.includes("clinic") || input.includes("doctor") || input.includes("dentist")) {
+        botResponse = "We have a dedicated 360° Appointment Booking System for healthcare. It includes automated reminders and no-show recovery. How many appointments do you typically handle per day?";
+      } else if (input.includes("price") || input.includes("cost") || input.includes("package")) {
+        botResponse = "Our plans start from ₹3,000/mo for Lead Capture backends up to ₹15,000/mo for the Full Revenue Growth Stack. I can recommend the best plan if you tell me your main business goal.";
+      } else if (input.includes("n8n") || input.includes("workflow") || input.includes("automate")) {
+        botResponse = "Our n8n Workflow Integrations are top-tier. We connect CRM, WhatsApp, and Ads into a single engine. Which tools are you currently using (e.g. Google Sheets, Meta Ads)?";
+      } else {
+        botResponse = "Got it! Our automation specialist, Divyansh, will review your requirements and contact you at the number provided to discuss a custom solution. Is there anything else you'd like to add?";
+      }
+      
+      setMessages(prev => [...prev, { role: "bot", content: botResponse }]);
+    }, 1200);
   };
 
   // Animations variants
@@ -330,9 +346,9 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-6 relative group"
+              className="lg:col-span-5 relative group"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-square bg-zinc-900">
+              <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-[4/5] bg-zinc-900">
                 <img 
                   src={founderImg} 
                   alt="Divyansh Sharma" 
@@ -357,7 +373,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-6"
+              className="lg:col-span-7"
             >
               <div className="mb-8">
                 <div className="text-primary text-6xl font-serif mb-4">“</div>
