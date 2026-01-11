@@ -47,22 +47,30 @@ export default function Home() {
     // Smarter Scripted Response Logic
     setTimeout(() => {
       let botResponse = "";
-      const input = userMsg.toLowerCase();
+      const input = chatInput.toLowerCase();
       
-      if (input.includes("hotel") || input.includes("resort")) {
-        botResponse = "Excellent. We specialize in Direct Booking Revenue Systems for hotels. This typically recovers 20-40% of revenue lost to OTAs. Would you like to see a demo of our mobile-first booking UI?";
-      } else if (input.includes("clinic") || input.includes("doctor") || input.includes("dentist")) {
-        botResponse = "We have a dedicated 360° Appointment Booking System for healthcare. It includes automated reminders and no-show recovery. How many appointments do you typically handle per day?";
-      } else if (input.includes("price") || input.includes("cost") || input.includes("package")) {
-        botResponse = "Our plans start from ₹3,000/mo for Lead Capture backends up to ₹15,000/mo for the Full Revenue Growth Stack. I can recommend the best plan if you tell me your main business goal.";
-      } else if (input.includes("n8n") || input.includes("workflow") || input.includes("automate")) {
-        botResponse = "Our n8n Workflow Integrations are top-tier. We connect CRM, WhatsApp, and Ads into a single engine. Which tools are you currently using (e.g. Google Sheets, Meta Ads)?";
+      if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
+        botResponse = "Hi there! 👋 I'm Divhanya's AI Assistant. I help businesses like yours automate complex workflows and recover lost revenue. What type of business are you looking to transform today?";
+      } else if (input.includes("hotel") || input.includes("resort") || input.includes("booking")) {
+        botResponse = "For Hotels & Resorts, we implement a Direct Booking Revenue Infrastructure. It bypasses OTA commissions (saving you 20-40%) and uses WhatsApp triggers for instant guest engagement. Would you like to know about our tiered pricing for this?";
+      } else if (input.includes("clinic") || input.includes("doctor") || input.includes("dentist") || input.includes("appointment")) {
+        botResponse = "Our 360° Appointment Booking System is perfect for healthcare. It automates the journey from lead capture to follow-up, significantly reducing no-shows. How many leads are you currently managing monthly?";
+      } else if (input.includes("price") || input.includes("cost") || input.includes("how much") || input.includes("subscription")) {
+        botResponse = "We offer flexible plans:\n• Starter: ₹3,000 - ₹5,000/mo (CRM & Basic Workflows)\n• Growth: ₹7,000 - ₹8,000/mo (Advanced Automation)\n• Pro: ₹15,000/mo (Full Revenue Growth Stack)\n\nWhich stage is your business currently in?";
+      } else if (input.includes("n8n") || input.includes("workflow") || input.includes("integrate") || input.includes("connect")) {
+        botResponse = "We are experts in n8n and advanced workflow integration. We can connect your CRM, Social Ads, and WhatsApp into one cohesive engine. Are you looking to automate manual data entry or lead routing?";
+      } else if (input.includes("ads") || input.includes("marketing") || input.includes("facebook") || input.includes("google")) {
+        botResponse = "Our Social & Ad Automation funnels are designed for high conversion. We automate retargeting and lead syncing so no ad spend is wasted. Do you already have active campaigns running?";
+      } else if (input.includes("founder") || input.includes("divyansh") || input.includes("who built")) {
+        botResponse = "Divhanya Modulers was founded by Divyansh Sharma, an AI & Data Science engineer from IIT Jodhpur. He built this system to democratize enterprise-grade automation for SMBs. Would you like to book an audit call with him?";
+      } else if (input.includes("contact") || input.includes("call") || input.includes("whatsapp") || input.includes("number")) {
+        botResponse = "You can reach our team at +91 8077073548 or via email at divhanyamodulers@gmail.com. Alternatively, I can take your number here and have a specialist call you back?";
       } else {
-        botResponse = "Got it! Our automation specialist, Divyansh, will review your requirements and contact you at the number provided to discuss a custom solution. Is there anything else you'd like to add?";
+        botResponse = "That's interesting! 🧠 Our systems are highly customizable. To give you the best advice, could you tell me: 1) Your business type, 2) Your monthly inquiry volume, and 3) The biggest bottleneck you're facing right now?";
       }
       
       setMessages(prev => [...prev, { role: "bot", content: botResponse }]);
-    }, 1200);
+    }, 1000);
   };
 
   // Animations variants
