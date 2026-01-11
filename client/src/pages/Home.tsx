@@ -55,29 +55,40 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="inline-block mb-4 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium tracking-wide backdrop-blur-sm"
+            className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-[10px] font-bold tracking-[0.2em] backdrop-blur-sm uppercase"
           >
-            INTELLIGENT BUSINESS AUTOMATION
+            <div className="w-3 h-3 rounded-full border border-primary/50 flex items-center justify-center">
+              <div className="w-1 h-1 bg-primary rounded-full animate-pulse"></div>
+            </div>
+            NEXT GEN WEB DEVELOPMENT
           </motion.div>
 
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-8xl font-black font-display mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/40 uppercase italic tracking-tighter"
+            className="text-5xl md:text-7xl lg:text-[100px] font-black font-display mb-8 leading-[0.9] text-white uppercase tracking-tighter"
           >
-            Divhanya Modulers<br />
-            <span className="text-primary text-glow drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] brightness-125">AI Automations</span>
+            DIVHANYA<br />
+            MODULERS —<br />
+            <span className="text-primary text-glow drop-shadow-[0_0_30px_rgba(0,255,255,0.6)] brightness-125">
+              AI AUTOMATIONS &<br />TECHNOLOGIES
+            </span>
           </motion.h1>
 
-          <motion.p 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed font-light tracking-wide"
+            className="max-w-3xl mx-auto mb-12 space-y-4"
           >
-            We do not sell software. We deliver full-stack revenue systems that automate bookings, leads, and workflows with zero headaches—empowering businesses to grow effortlessly.
-          </motion.p>
+            <p className="text-xs md:text-sm text-white font-bold tracking-[0.05em] uppercase">
+              Intelligent Revenue-Driven Automations for Small & Medium Businesses
+            </p>
+            <p className="text-xs md:text-sm text-gray-500 font-medium leading-relaxed max-w-2xl mx-auto">
+              We do not sell software. We deliver full-stack revenue systems that automate bookings, lead conversions, follow-ups, workflows, CRM, and digital conversions with zero headaches — empowering businesses to grow effortlessly.
+            </p>
+          </motion.div>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -85,11 +96,11 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button size="lg" className="neon-button bg-primary text-black font-bold h-14 px-8 text-lg w-full sm:w-auto" asChild>
-              <a href="#contact">Book Growth Audit</a>
+            <Button size="lg" className="bg-primary/20 text-primary border border-primary/40 hover:bg-primary/30 font-bold h-14 px-10 text-sm tracking-widest rounded-sm w-full sm:w-auto" asChild>
+              <a href="#contact" className="flex items-center gap-2">Explore Modules <ChevronRight className="w-4 h-4" /></a>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg w-full sm:w-auto border-white/20 hover:bg-white/5" asChild>
-              <a href="#services">Explore Services</a>
+            <Button size="lg" variant="outline" className="h-14 px-10 text-sm tracking-widest rounded-sm w-full sm:w-auto border-white/10 hover:bg-white/5 bg-transparent text-gray-400 font-bold">
+              Start Project
             </Button>
           </motion.div>
 
