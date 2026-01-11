@@ -166,46 +166,53 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ServiceCard 
-              title="Direct Booking System"
+              title="Direct Booking Revenue System"
               price="₹4,500/mo"
-              description="Cut OTA commissions. Automated booking engine for hotels & resorts that drives direct revenue."
+              description="Cut OTA commissions. Automated booking engine for hotels & resorts that drives direct revenue. Includes interactive mobile UI, WhatsApp triggers, and backend automation."
               icon="hotel"
               delay={0}
             />
             <ServiceCard 
-              title="WhatsApp Automation"
+              title="WhatsApp & Chat Automation"
               price="₹3,500/mo"
-              description="24/7 Chatbot that answers queries, sends reminders, and nurtures leads automatically."
+              description="Smart conversation flows, instant replies, and enquiry categorization. Never miss a lead with automated 24/7 engagement and CRM sync."
               icon="whatsapp"
               delay={0.1}
             />
             <ServiceCard 
-              title="Lead Capture CRM"
+              title="Lead Capture & CRM Systems"
               price="₹3,000/mo"
-              description="Never lose a lead again. Centralized system to capture, track, and convert every prospect."
+              description="Track every lead source (forms, calls, WhatsApp) with real-time updates and score-based prioritization. Zero leads slip through the cracks."
               icon="crm"
               delay={0.2}
             />
             <ServiceCard 
-              title="N8N Workflow Auto"
+              title="N8N Workflow Integrations"
               price="₹5,000/mo"
-              description="Complex cross-app automations connecting your entire tech stack for seamless operations."
+              description="Smart connectors that link your entire tech stack—forms, CRM, WhatsApp, ads—into a single automated engine for maximum efficiency."
               icon="workflow"
               delay={0.3}
             />
             <ServiceCard 
-              title="Appointment Bot"
-              price="₹4,000/mo"
-              description="Smart scheduling assistant that qualifies leads and books meetings on your calendar."
-              icon="booking"
+              title="Social & Ads Automation"
+              price="₹8,000"
+              description="Performance funnels that automate ad triggers, lead syncing, and retargeting sequences across Google and Meta platforms."
+              icon="ads"
               delay={0.4}
             />
             <ServiceCard 
-              title="Full Growth System"
-              price="₹15,000/mo"
-              description="The complete hybrid engine. Ads, CRM, Chatbots, and Workflow automation in one powerhouse."
-              icon="full"
+              title="Appointment Booking"
+              price="₹4,000/mo"
+              description="360° journey for healthcare & service firms. Automated booking, confirmations, and no-show recovery systems live in days."
+              icon="booking"
               delay={0.5}
+            />
+            <ServiceCard 
+              title="Full Revenue Growth System"
+              price="₹15,000/mo"
+              description="The complete plug-and-play powerhouse. Direct booking + workflows + chat + CRM + ads automation. A total business transformation."
+              icon="full"
+              delay={0.6}
             />
           </div>
         </div>
@@ -283,11 +290,17 @@ export default function Home() {
                 <h3 className="text-sm font-bold text-secondary uppercase tracking-widest mb-2">Meet The Founder</h3>
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">Divyansh Sharma</h2>
                 <div className="inline-block px-3 py-1 bg-white/5 rounded-full text-xs font-mono mb-6 border border-white/10">
-                  IIT Jodhpur • AI & Data Science
+                  Engineering in Artificial Intelligence & Data Science — IIT Jodhpur
+                </div>
+                <div className="space-y-2 mb-8 text-sm text-gray-300">
+                  <div className="flex items-center gap-2">✔ Advanced Diploma in Computer Applications</div>
+                  <div className="flex items-center gap-2">✔ Course on Computer Concepts (CCC)</div>
+                  <div className="flex items-center gap-2">✔ Applicable Uses of Professional AI Tools</div>
+                  <div className="flex items-center gap-2">✔ ISRO Space Awareness Certificate</div>
                 </div>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  "I founded Divhanya Modulers with a single mission: to democratize enterprise-grade AI automation for everyone. 
-                  We don't just write code; we engineer systems that work tirelessly to grow your business."
+                  Divyansh leads with a vision to simplify automation — turning complex workflows into revenue generators for small and medium businesses. 
+                  "We don't just write code; we engineer systems that work tirelessly to grow your business."
                 </p>
                 
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
@@ -315,23 +328,35 @@ export default function Home() {
               
               <div className="space-y-8 mb-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h3>
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion type="single" collapsible className="w-full" id="faq">
                   <AccordionItem value="item-1" className="border-white/10">
-                    <AccordionTrigger className="text-white hover:text-primary">How long does implementation take?</AccordionTrigger>
+                    <AccordionTrigger className="text-white hover:text-primary">What makes Divhanya Modulers different?</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Most standard automations are live within 3-5 days. Complex custom workflows may take up to 2 weeks for full testing and deployment.
+                      We do not sell tech — we deliver measurable revenue systems. We focus on outcome systems, not tech fragments, ensuring every lead turns into measurable revenue.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="border-white/10">
-                    <AccordionTrigger className="text-white hover:text-primary">Is there a setup fee?</AccordionTrigger>
+                    <AccordionTrigger className="text-white hover:text-primary">Do you handle everything?</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Yes, some complex systems like "Social & Ads Automation" have a one-time setup fee. Monthly plans cover maintenance and server costs.
+                      Yes. Frontend, backend, automations, CRM, WhatsApp workflows — fully managed. You focus on business, we handle the tech.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="border-white/10">
-                    <AccordionTrigger className="text-white hover:text-primary">Do you offer support?</AccordionTrigger>
+                    <AccordionTrigger className="text-white hover:text-primary">Who is this for?</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Absolutely. All our monthly plans include ongoing maintenance and support to ensure your automations run smoothly 24/7.
+                      Hotels, clinics, dentists, MSMEs, service firms, coaching institutes, and e-commerce funnels.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-4" className="border-white/10">
+                    <AccordionTrigger className="text-white hover:text-primary">How soon can I see results?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Typically within 7–14 days. Our rapid deployment model ensures you start recovering missed revenue quickly.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="border-white/10">
+                    <AccordionTrigger className="text-white hover:text-primary">Is there onboarding support?</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Yes, free audit + guided setup. We provide smooth onboarding and weekly optimization performance reports.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -380,13 +405,13 @@ export default function Home() {
               <div className="bg-primary/10 p-4 border-b border-primary/20 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <Bot className="w-5 h-5 text-primary" />
-                  <span className="font-bold text-white text-sm">Divhanya AI</span>
+                  <span className="font-bold text-white text-sm">Divhanya AI Assistant</span>
                 </div>
                 <button onClick={() => setShowChat(false)} className="text-white/50 hover:text-white"><X className="w-4 h-4" /></button>
               </div>
               <div className="flex-1 p-4 overflow-y-auto space-y-3">
                 <div className="bg-white/5 p-3 rounded-xl rounded-tl-none max-w-[80%] text-sm text-gray-300">
-                  Hello! I'm your AI assistant. How can I help you grow your business today?
+                  Hi 👋 I’m Divhanya AI. I help businesses automate bookings, leads and revenue systems. What type of business do you run?
                 </div>
               </div>
               <div className="p-3 border-t border-white/10">
@@ -410,7 +435,7 @@ export default function Home() {
           </motion.button>
 
           <motion.a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/918077073548"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}

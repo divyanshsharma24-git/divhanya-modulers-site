@@ -18,17 +18,20 @@ export function Footer() {
                 DIVHANYA<span className="text-primary">.AI</span>
               </span>
             </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Pioneering intelligent revenue-driven automations for businesses ready to scale.
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              © 2026 Divhanya Modulers — AI Automations & Technologies — Built by Divyansh Sharma
+            </p>
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              Stakeholders: Janhvi Sharma • Divyansh Sharma
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+              <a href="https://www.linkedin.com/in/divhanya-modulers-ai-automations-and-technologies-19a4373a4" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+              <a href="https://twitter.com/divhanyamods" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+              <a href="https://instagram.com/divhanyamodulers.in" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -65,11 +68,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a href="mailto:contact@divhanya.ai" className="hover:text-primary">contact@divhanya.ai</a>
+                <a href="mailto:divhanyamodulers@gmail.com" className="hover:text-primary">divhanyamodulers@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+91 98765 43210</span>
+                <a href="https://wa.me/918077073548" target="_blank" rel="noopener noreferrer" className="hover:text-primary">+91 8077073548</a>
               </li>
             </ul>
           </div>
