@@ -28,7 +28,8 @@ import {
   Send,
   Linkedin,
   Twitter,
-  Instagram
+  Instagram,
+  Check
 } from "lucide-react";
 import logoImg from "@assets/image_1768131702952.png";
 import founderImg from "@assets/image_1768131693800.png";
@@ -130,7 +131,7 @@ export default function Home() {
           >
             DIVHANYA<br />
             MODULERS —<br />
-            <span className="text-primary text-glow drop-shadow-[0_0_30px_rgba(0,255,255,0.6)] brightness-125">
+            <span className="text-primary/70 text-glow drop-shadow-[0_0_15px_rgba(0,255,255,0.3)]">
               AI AUTOMATIONS &<br />TECHNOLOGIES
             </span>
           </motion.h1>
@@ -442,12 +443,12 @@ export default function Home() {
                 <img 
                   src={founderImg} 
                   alt="Divyansh Sharma" 
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
+                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105 cursor-pointer" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
                 <div className="absolute bottom-8 left-8 z-20">
-                  <h3 className="text-3xl font-bold font-display text-white tracking-wider mb-1">Divyansh Sharma</h3>
-                  <p className="text-cyan-400 font-bold text-sm tracking-[0.2em] uppercase">FOUNDER</p>
+                  <h3 className="text-2xl font-bold font-display text-white tracking-wider mb-1">DIVYANSH SHARMA</h3>
+                  <p className="text-cyan-400 font-bold text-[10px] tracking-[0.2em] uppercase">FOUNDER & LEAD ARCHITECT</p>
                 </div>
                 {/* Decorative Frame Elements - Matches Sample precisely */}
                 <div className="absolute top-6 left-6 w-20 h-20 border-t-2 border-l-2 border-cyan-500/50 rounded-tl-3xl"></div>
@@ -466,30 +467,53 @@ export default function Home() {
               className="lg:col-span-6"
             >
               <div className="mb-12">
-                <h2 className="text-4xl md:text-6xl font-bold font-display leading-tight text-white mb-8 tracking-tighter uppercase">
-                  MEET OUR <span className="text-cyan-400 text-glow drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]">FOUNDER</span>
+                <div className="text-cyan-400/40 text-6xl font-serif mb-4">“</div>
+                <h2 className="text-3xl md:text-5xl font-bold font-display leading-tight text-white mb-6">
+                  "We are entering an era where manual business processes are the <span className="text-cyan-400 text-glow">biggest liability."</span>
                 </h2>
-                <p className="text-gray-400 text-lg leading-relaxed mb-10">
-                  Divyansh leads with vision to simplify automation — turning complex workflows into revenue generators for small and medium businesses.
+                
+                <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                  At Divhanya Modulers, my mission is simple: to democratize enterprise-grade automation for growing businesses. We don't just build websites; we build engines that generate revenue while you sleep.
                 </p>
                 
-                <div className="space-y-5">
+                <p className="text-gray-500 text-sm leading-relaxed mb-10">
+                  Every module we deploy is tested for one metric only: <span className="text-white font-bold tracking-widest">ROI.</span> If it doesn't save time or make money, we don't build it.
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4 group">
+                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
+                      <Check className="w-4 h-4 text-cyan-400" />
+                    </div>
+                    <div>
+                      <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur</span>
+                      <div className="mt-4 space-y-4">
+                        <div className="flex items-start gap-4 group/sub">
+                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-cyan-400" />
+                          </div>
+                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Microsoft AI Intern Workshop</span>
+                        </div>
+                        <div className="flex items-start gap-4 group/sub">
+                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
+                            <Check className="w-4 h-4 text-cyan-400" />
+                          </div>
+                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Joined Various Hackathons as IIT alumni</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   {[
-                    "Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur",
                     "Advanced Diploma in Computer Applications",
                     "Course on Computer Concepts (CCC)",
                     "Applicable Uses of Professional AI Tools",
-                    "ISRO Space Awareness Certificate",
-                    "Microsoft AI Intern Workshop",
-                    "Joined Various Hackathons as IIT alumni"
+                    "ISRO Space Awareness Certificate"
                   ].map((cert, idx) => (
                     <div key={idx} className="flex items-start gap-4 group">
-                      <div className="mt-1 flex-shrink-0">
-                        <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                        </svg>
+                      <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
+                        <Check className="w-4 h-4 text-cyan-400" />
                       </div>
-                      <span className="text-gray-300 font-medium group-hover:text-white transition-colors">{cert}</span>
+                      <span className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">{cert}</span>
                     </div>
                   ))}
                 </div>
