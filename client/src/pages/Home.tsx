@@ -64,20 +64,19 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/50"
+            className="text-4xl md:text-6xl lg:text-8xl font-black font-display mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/40 uppercase italic tracking-tighter"
           >
             Divhanya Modulers<br />
-            <span className="text-primary text-glow">AI Automations & Tech</span>
+            <span className="text-primary text-glow drop-shadow-[0_0_20px_rgba(0,255,255,0.8)] brightness-125">AI Automations</span>
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed font-light tracking-wide"
           >
-            We build intelligent, revenue-driven automation systems for small & medium businesses. 
-            Stop wasting time on manual tasks. Start scaling.
+            We do not sell software. We deliver full-stack revenue systems that automate bookings, leads, and workflows with zero headaches—empowering businesses to grow effortlessly.
           </motion.p>
 
           <motion.div 
@@ -129,19 +128,28 @@ export default function Home() {
             <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent -translate-y-1/2 z-0" />
             
             <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
-              {["Discovery", "Audit", "Build", "Connect", "Test", "Live", "Insights"].map((step, i) => (
+              {[
+                { name: "Discovery Call", icon: "🤝" },
+                { name: "Audit & Plan", icon: "📊" },
+                { name: "Build & Integrate", icon: "🧠" },
+                { name: "Connect CRM", icon: "🔗" },
+                { name: "Test & Optimize", icon: "📞" },
+                { name: "Live & Grow", icon: "🚀" },
+                { name: "Performance Insights", icon: "📈" }
+              ].map((step, i) => (
                 <motion.div 
-                  key={step}
+                  key={step.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
                   className="relative z-10 flex flex-col items-center"
                 >
-                  <div className="w-12 h-12 rounded-full bg-background border border-primary/50 flex items-center justify-center text-primary font-bold shadow-[0_0_15px_rgba(0,255,255,0.3)] mb-4 group hover:scale-110 transition-transform cursor-default">
-                    {i + 1}
+                  <div className="w-16 h-16 rounded-full bg-background border border-primary/50 flex items-center justify-center text-2xl shadow-[0_0_15px_rgba(0,255,255,0.3)] mb-4 group hover:scale-110 transition-transform cursor-default relative overflow-hidden">
+                    <div className="absolute inset-0 bg-primary/5 animate-pulse"></div>
+                    <span className="relative z-10">{step.icon}</span>
                   </div>
-                  <h3 className="text-sm font-bold tracking-wider uppercase">{step}</h3>
+                  <h3 className="text-xs font-bold tracking-wider uppercase text-center max-w-[100px]">{step.name}</h3>
                 </motion.div>
               ))}
             </div>
@@ -164,55 +172,48 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard 
-              title="Direct Booking Revenue System"
-              price="₹4,500/mo"
-              description="Cut OTA commissions. Automated booking engine for hotels & resorts that drives direct revenue. Includes interactive mobile UI, WhatsApp triggers, and backend automation."
+              title="Direct Booking Revenue Infrastructure"
+              price="Starter: ₹4,500/mo"
+              description="Mobile-first direct booking page connected to automation backend. Includes interactive mobile UI, live offers, WhatsApp triggers, guest trust blocks, and full workflow automation. Problem Solved: Hotels lose 20–40% revenue to third-party platforms. We bring direct bookings home."
               icon="hotel"
               delay={0}
             />
             <ServiceCard 
-              title="WhatsApp & Chat Automation"
-              price="₹3,500/mo"
-              description="Smart conversation flows, instant replies, and enquiry categorization. Never miss a lead with automated 24/7 engagement and CRM sync."
+              title="WhatsApp & Chat Workflow Automation"
+              price="Starter: ₹3,500/mo"
+              description="Automated conversation flows, instant replies, enquiry categorization, follow-ups, and CRM sync. Includes smart auto-replies, missed-call triggers, and full chat history tracking. Problem Solved: Businesses miss inquiries due to slow replies."
               icon="whatsapp"
               delay={0.1}
             />
             <ServiceCard 
-              title="Lead Capture & CRM Systems"
-              price="₹3,000/mo"
-              description="Track every lead source (forms, calls, WhatsApp) with real-time updates and score-based prioritization. Zero leads slip through the cracks."
+              title="Lead Capture & CRM Backends"
+              price="Starter: ₹3,000/mo"
+              description="Google Sheets or lightweight CRM backend tracking every lead source—forms, calls, landing pages. Real-time updates, lead scoring, and weekly performance reports. Problem Solved: Leads slip through cracks → lost revenue."
               icon="crm"
               delay={0.2}
             />
             <ServiceCard 
-              title="N8N Workflow Integrations"
-              price="₹5,000/mo"
-              description="Smart connectors that link your entire tech stack—forms, CRM, WhatsApp, ads—into a single automated engine for maximum efficiency."
+              title="N8N Workflow Integrations (Smart Connectors)"
+              price="Starter: ₹5,000/mo"
+              description="Data sync pipelines and trigger-based workflows connecting forms, CRM, WhatsApp, ads, and more into a single automated engine. Problem Solved: Manual tasks slow business growth."
               icon="workflow"
               delay={0.3}
             />
             <ServiceCard 
-              title="Social & Ads Automation"
-              price="₹8,000"
-              description="Performance funnels that automate ad triggers, lead syncing, and retargeting sequences across Google and Meta platforms."
+              title="Social & Ads Automation (Performance Funnels)"
+              price="Setup: ₹8,000"
+              description="Automate ad triggers, creative refresh workflows, lead syncing, and retargeting sequences across Google and Meta platforms. Problem Solved: Manual ad campaigns cost time & money."
               icon="ads"
               delay={0.4}
             />
             <ServiceCard 
-              title="Appointment Booking"
-              price="₹4,000/mo"
-              description="360° journey for healthcare & service firms. Automated booking, confirmations, and no-show recovery systems live in days."
+              title="360° Appointment Booking System"
+              price="Starter: ₹4,000/mo"
+              description="Automated booking journey for healthcare & service firms—form → WhatsApp → confirmation → reminders → follow-ups. Includes patient tagging and recovery systems. Problem Solved: No shows & manual appointment chaos."
               icon="booking"
               delay={0.5}
-            />
-            <ServiceCard 
-              title="Full Revenue Growth System"
-              price="₹15,000/mo"
-              description="The complete plug-and-play powerhouse. Direct booking + workflows + chat + CRM + ads automation. A total business transformation."
-              icon="full"
-              delay={0.6}
             />
           </div>
         </div>
@@ -276,42 +277,78 @@ export default function Home() {
       </section>
 
       {/* Founder Section */}
-      <section id="about" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 to-transparent pointer-events-none"></div>
+      <section id="about" className="py-32 relative overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(157,0,255,0.1),transparent_50%)] pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="glass-card rounded-3xl p-8 md:p-12 border-l-4 border-l-secondary">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-white/10 shrink-0 relative group">
-                <div className="absolute inset-0 bg-secondary/20 group-hover:bg-transparent transition-colors z-10"></div>
-                <img src={founderImg} alt="Divyansh Sharma" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Image Column */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-5 relative group"
+            >
+              <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-[4/5] bg-zinc-900">
+                <img 
+                  src={founderImg} 
+                  alt="Divyansh Sharma" 
+                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                <div className="absolute bottom-6 left-6 z-20">
+                  <h3 className="text-2xl font-bold font-display text-white tracking-wider">DIVYANSH SHARMA</h3>
+                  <p className="text-secondary font-medium text-xs tracking-[0.2em] mt-1 uppercase">Founder & Lead Architect</p>
+                </div>
+                {/* Decorative Frame Elements */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-secondary/50 rounded-tl-lg"></div>
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-secondary/50 rounded-br-lg"></div>
               </div>
-              
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-sm font-bold text-secondary uppercase tracking-widest mb-2">Meet The Founder</h3>
-                <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">Divyansh Sharma</h2>
-                <div className="inline-block px-3 py-1 bg-white/5 rounded-full text-xs font-mono mb-6 border border-white/10">
-                  Engineering in Artificial Intelligence & Data Science — IIT Jodhpur
-                </div>
-                <div className="space-y-2 mb-8 text-sm text-gray-300">
-                  <div className="flex items-center gap-2">✔ Advanced Diploma in Computer Applications</div>
-                  <div className="flex items-center gap-2">✔ Course on Computer Concepts (CCC)</div>
-                  <div className="flex items-center gap-2">✔ Applicable Uses of Professional AI Tools</div>
-                  <div className="flex items-center gap-2">✔ ISRO Space Awareness Certificate</div>
-                </div>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  Divyansh leads with a vision to simplify automation — turning complex workflows into revenue generators for small and medium businesses. 
-                  "We don't just write code; we engineer systems that work tirelessly to grow your business."
+              {/* Glow behind image */}
+              <div className="absolute -inset-4 bg-secondary/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+            </motion.div>
+
+            {/* Content Column */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-7"
+            >
+              <div className="mb-8">
+                <div className="text-primary text-6xl font-serif mb-4">“</div>
+                <h2 className="text-3xl md:text-5xl font-bold font-display leading-tight text-white mb-6">
+                  We are entering an era where manual business processes are the <span className="text-primary text-glow">biggest liability.</span>
+                </h2>
+                <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+                  Divyansh leads with a vision to simplify automation — turning complex workflows into revenue generators for small and medium businesses.
                 </p>
-                
-                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  {['AI Strategy', 'Workflow Architecture', 'Data Science', 'Business Logic'].map(skill => (
-                    <span key={skill} className="px-3 py-1 bg-black/40 border border-white/10 rounded text-xs text-gray-300">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
               </div>
-            </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { title: "Engineering in AI & Data Science (IIT Jodhpur)", subtitle: "Indian Institute of Technology" },
+                  { title: "Advanced Diploma in Computer Applications", subtitle: "ADCA" },
+                  { title: "Course on Computer Concepts (CCC)", subtitle: "Professional Certification" },
+                  { title: "Professional AI Tools Certification", subtitle: "Advanced Use Cases" },
+                  { title: "ISRO Space Awareness Certificate", subtitle: "Department of Space, India" },
+                ].map((cert, idx) => (
+                  <motion.div 
+                    key={idx}
+                    whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
+                    className="flex items-center gap-4 p-5 bg-white/5 border border-white/10 rounded-xl transition-all relative overflow-hidden group"
+                  >
+                    <div className="absolute top-0 left-0 w-1 h-full bg-primary/40 group-hover:bg-primary transition-colors"></div>
+                    <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,255,255,0.8)]"></div>
+                    <div>
+                      <span className="text-sm font-bold text-gray-100 block">{cert.title}</span>
+                      <span className="text-[10px] text-primary/60 uppercase tracking-widest">{cert.subtitle}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
