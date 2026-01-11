@@ -239,7 +239,7 @@ export default function Home() {
                 Scalable solutions designed to automate your workflows and maximize revenue.
               </p>
             </div>
-            <Button variant="link" className="text-primary" asChild>
+            <Button variant="ghost" className="text-primary" asChild>
               <a href="#contact" className="flex items-center gap-2">View Full Pricing <ChevronRight className="w-4 h-4" /></a>
             </Button>
           </div>
@@ -291,7 +291,7 @@ export default function Home() {
               title="Full Revenue Growth Stack"
               price="Pro: ₹15,000/mo"
               description="Everything in direct booking + workflow + chat + CRM + automation + ad sync. A true plug-and-play revenue system. Problem Solved: Need a complete revenue solution."
-              icon="rocket"
+              icon="full"
               delay={0.6}
             />
           </div>
