@@ -34,6 +34,10 @@ import {
 import logoImg from "@assets/image_1768131702952.png";
 import founderImg from "@assets/image_1768131693800.png";
 
+import iitjLogo from "@assets/image_1768138096209.png";
+import microsoftLogo from "@assets/image_1768138178965.png";
+import quantumLogo from "@assets/image_1768138471136.png";
+
 export default function Home() {
   const [showHelpdesk, setShowHelpdesk] = useState(false);
   const [showChat, setShowChat] = useState(false);
@@ -482,15 +486,21 @@ export default function Home() {
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 group">
-                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
-                      <Check className="w-4 h-4 text-cyan-400" />
+                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
+                      <img src={iitjLogo} alt="IITJ" className="w-4 h-4 object-contain" />
                     </div>
                     <div>
                       <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur</span>
                       <div className="mt-4 space-y-4">
                         <div className="flex items-start gap-4 group/sub">
-                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
-                            <Check className="w-4 h-4 text-cyan-400" />
+                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
+                            <img src={quantumLogo} alt="Quantum" className="w-4 h-4 object-contain" />
+                          </div>
+                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Masters In Quantum Mechanics, Delhi</span>
+                        </div>
+                        <div className="flex items-start gap-4 group/sub">
+                          <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
+                            <img src={microsoftLogo} alt="Microsoft" className="w-4 h-4 object-contain" />
                           </div>
                           <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Microsoft AI Intern Workshop</span>
                         </div>
@@ -498,7 +508,7 @@ export default function Home() {
                           <div className="mt-1 flex-shrink-0 w-6 h-6 rounded bg-cyan-400/10 flex items-center justify-center">
                             <Check className="w-4 h-4 text-cyan-400" />
                           </div>
-                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Joined Various Hackathons as IIT alumni</span>
+                          <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Multi-time hackathon winner representing IIT Alumni</span>
                         </div>
                       </div>
                     </div>
