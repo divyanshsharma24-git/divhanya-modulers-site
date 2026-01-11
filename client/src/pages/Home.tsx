@@ -484,48 +484,26 @@ export default function Home() {
                   Every module we deploy is tested for one metric only: <span className="text-white font-bold tracking-widest">ROI.</span> If it doesn't save time or make money, we don't build it.
                 </p>
                 
-                <div className="space-y-6">
-                  <div className="flex items-center gap-5 group">
-                    <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
-                      <img src={iitjLogo} alt="IITJ" className="w-5 h-5 object-contain" />
-                    </div>
-                    <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors">Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur</span>
-                  </div>
-
-                  <div className="space-y-5 ml-[52px]">
-                    <div className="flex items-center gap-5 group/sub">
-                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
-                        <img src={quantumLogo} alt="Quantum" className="w-5 h-5 object-contain" />
-                      </div>
-                      <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Masters In Quantum Mechanics, Delhi</span>
-                    </div>
-
-                    <div className="flex items-center gap-5 group/sub">
-                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
-                        <img src={microsoftLogo} alt="Microsoft" className="w-5 h-5 object-contain" />
-                      </div>
-                      <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Microsoft AI Intern Workshop</span>
-                    </div>
-
-                    <div className="flex items-center gap-5 group/sub">
-                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center">
-                        <Check className="w-5 h-5 text-cyan-400" />
-                      </div>
-                      <span className="text-gray-400 text-sm font-medium group-hover/sub:text-white transition-colors">Multi-time hackathon winner representing IIT Alumni</span>
-                    </div>
-                  </div>
-
+                <div className="space-y-4">
                   {[
-                    "Advanced Diploma in Computer Applications",
-                    "Course on Computer Concepts (CCC)",
-                    "Applicable Uses of Professional AI Tools",
-                    "ISRO Space Awareness Certificate"
-                  ].map((cert, idx) => (
+                    { text: "Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur", logo: iitjLogo },
+                    { text: "Masters In Quantum Mechanics, Delhi", logo: quantumLogo },
+                    { text: "Microsoft AI Intern Workshop", logo: microsoftLogo },
+                    { text: "Multi-time hackathon winner representing IIT Alumni", icon: Check },
+                    { text: "Advanced Diploma in Computer Applications", icon: Check },
+                    { text: "Course on Computer Concepts (CCC)", icon: Check },
+                    { text: "Applicable Uses of Professional AI Tools", icon: Check },
+                    { text: "ISRO Space Awareness Certificate", icon: Check }
+                  ].map((item: any, idx) => (
                     <div key={idx} className="flex items-center gap-5 group">
-                      <div className="flex-shrink-0 w-8 h-8 rounded bg-cyan-400/10 flex items-center justify-center">
-                        <Check className="w-5 h-5 text-cyan-400" />
+                      <div className="flex-shrink-0 w-[40px] h-[40px] rounded bg-cyan-400/10 flex items-center justify-center overflow-hidden">
+                        {item.logo ? (
+                          <img src={item.logo} alt="Logo" className="w-[26px] h-[26px] object-contain" />
+                        ) : (
+                          <item.icon className="w-[26px] h-[26px] text-cyan-400" />
+                        )}
                       </div>
-                      <span className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">{cert}</span>
+                      <span className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">{item.text}</span>
                     </div>
                   ))}
                 </div>
