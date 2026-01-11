@@ -433,25 +433,25 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-5 relative group"
+              className="lg:col-span-6 relative group"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-[4/5] bg-zinc-900">
+              <div className="relative z-10 rounded-2xl overflow-hidden border border-cyan-500/30 aspect-[4/5] bg-zinc-900 shadow-[0_0_50px_rgba(0,255,255,0.1)]">
                 <img 
                   src={founderImg} 
                   alt="Divyansh Sharma" 
-                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" 
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-                <div className="absolute bottom-6 left-6 z-20">
-                  <h3 className="text-2xl font-bold font-display text-white tracking-wider">DIVYANSH SHARMA</h3>
-                  <p className="text-secondary font-medium text-xs tracking-[0.2em] mt-1 uppercase">Founder & Lead Architect</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
+                <div className="absolute bottom-8 left-8 z-20">
+                  <h3 className="text-3xl font-bold font-display text-white tracking-wider mb-1">Divyansh Sharma</h3>
+                  <p className="text-cyan-400 font-bold text-sm tracking-[0.2em] uppercase">FOUNDER</p>
                 </div>
-                {/* Decorative Frame Elements */}
-                <div className="absolute top-4 left-4 w-12 h-12 border-t border-l border-primary/40 rounded-tl-xl"></div>
-                <div className="absolute bottom-4 right-4 w-12 h-12 border-b border-r border-primary/40 rounded-br-xl"></div>
+                {/* Decorative Frame Elements - Matches Sample precisely */}
+                <div className="absolute top-6 left-6 w-20 h-20 border-t-2 border-l-2 border-cyan-500/50 rounded-tl-3xl"></div>
+                <div className="absolute -bottom-2 -right-2 w-24 h-24 border-b-2 border-r-2 border-purple-500/50 rounded-br-3xl"></div>
               </div>
               {/* Glow behind image */}
-              <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+              <div className="absolute -inset-4 bg-cyan-500/10 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
             </motion.div>
 
             {/* Content Column */}
@@ -460,39 +460,48 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-7"
+              className="lg:col-span-6"
             >
-              <div className="mb-8">
-                <div className="text-primary text-6xl font-serif mb-4">“</div>
-                <h2 className="text-3xl md:text-5xl font-bold font-display leading-tight text-white mb-6">
-                  We are entering an era where manual business processes are the <span className="text-primary text-glow">biggest liability.</span>
+              <div className="mb-12">
+                <h2 className="text-4xl md:text-6xl font-bold font-display leading-tight text-white mb-8 tracking-tighter uppercase">
+                  MEET OUR <span className="text-cyan-400 text-glow drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]">FOUNDER</span>
                 </h2>
-                <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
-                  Divyansh leads with a vision to simplify automation — turning complex workflows into revenue generators for small and medium businesses.
+                <p className="text-gray-400 text-lg leading-relaxed mb-10">
+                  Divyansh leads with vision to simplify automation — turning complex workflows into revenue generators for small and medium businesses.
                 </p>
+                
+                <div className="space-y-5">
+                  {[
+                    "Engineering in Artificial Intelligence & Data Science — Indian Institute of Technology Jodhpur",
+                    "Advanced Diploma in Computer Applications",
+                    "Course on Computer Concepts (CCC)",
+                    "Applicable Uses of Professional AI Tools",
+                    "ISRO Space Awareness Certificate",
+                    "Microsoft AI Intern Workshop",
+                    "Joined Various Hackathons as IIT alumni"
+                  ].map((cert, idx) => (
+                    <div key={idx} className="flex items-start gap-4 group">
+                      <div className="mt-1 flex-shrink-0">
+                        <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-gray-300 font-medium group-hover:text-white transition-colors">{cert}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  { title: "Engineering in AI & Data Science (IIT Jodhpur)", subtitle: "Indian Institute of Technology" },
-                  { title: "Advanced Diploma in Computer Applications", subtitle: "ADCA" },
-                  { title: "Course on Computer Concepts (CCC)", subtitle: "Professional Certification" },
-                  { title: "Professional AI Tools Certification", subtitle: "Advanced Use Cases" },
-                  { title: "ISRO Space Awareness Certificate", subtitle: "Department of Space, India" },
-                ].map((cert, idx) => (
-                  <motion.div 
-                    key={idx}
-                    whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.05)" }}
-                    className="flex items-center gap-4 p-5 bg-white/5 border border-white/10 rounded-xl transition-all relative overflow-hidden group"
-                  >
-                    <div className="absolute top-0 left-0 w-1 h-full bg-primary/40 group-hover:bg-primary transition-colors"></div>
-                    <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(0,255,255,0.8)]"></div>
-                    <div>
-                      <span className="text-sm font-bold text-gray-100 block">{cert.title}</span>
-                      <span className="text-[10px] text-primary/60 uppercase tracking-widest">{cert.subtitle}</span>
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="flex gap-6 mt-12">
+                <a href="https://www.linkedin.com/in/divhanya-modulers-ai-automations-and-technologies-19a4373a4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a href="https://twitter.com/divhanyamods" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Twitter className="w-6 h-6" />
+                </a>
+                <a href="https://instagram.com/divhanyamodulers.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Instagram className="w-6 h-6" />
+                </a>
               </div>
             </motion.div>
           </div>
