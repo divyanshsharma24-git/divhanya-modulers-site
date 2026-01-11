@@ -52,15 +52,17 @@ export default function Home() {
       if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
         botResponse = "Hi there! 👋 I'm Divhanya's AI Assistant. I help businesses like yours automate complex workflows and recover lost revenue. What type of business are you looking to transform today?";
       } else if (input.includes("hotel") || input.includes("resort") || input.includes("booking")) {
-        botResponse = "For Hotels & Resorts, we implement a Direct Booking Revenue Infrastructure. It bypasses OTA commissions (saving you 20-40%) and uses WhatsApp triggers for instant guest engagement. Would you like to know about our tiered pricing for this?";
+        botResponse = "For Hotels & Resorts, we implement a Direct Booking Revenue Infrastructure. It bypasses OTA commissions (saving you 20-40%) and uses WhatsApp triggers for instant guest engagement. Our starter plan begins at ₹4,500/mo. Would you like to see the full feature list?";
       } else if (input.includes("clinic") || input.includes("doctor") || input.includes("dentist") || input.includes("appointment")) {
-        botResponse = "Our 360° Appointment Booking System is perfect for healthcare. It automates the journey from lead capture to follow-up, significantly reducing no-shows. How many leads are you currently managing monthly?";
+        botResponse = "Our 360° Appointment Booking System (starting at ₹4,000/mo) is perfect for healthcare. It automates the journey from lead capture to follow-up, significantly reducing no-shows. How many appointments are you currently managing daily?";
       } else if (input.includes("price") || input.includes("cost") || input.includes("how much") || input.includes("subscription")) {
-        botResponse = "We offer flexible plans:\n• Starter: ₹3,000 - ₹5,000/mo (CRM & Basic Workflows)\n• Growth: ₹7,000 - ₹8,000/mo (Advanced Automation)\n• Pro: ₹15,000/mo (Full Revenue Growth Stack)\n\nWhich stage is your business currently in?";
+        botResponse = "We have transparent tiered pricing:\n• Starter Plans: ₹3,000 - ₹5,000/mo\n• Growth Plans: ₹5,000 - ₹8,000/mo\n• Full Stack Pro: ₹15,000/mo\n\nAll plans include setup and ongoing support. Which plan sounds right for your scale?";
       } else if (input.includes("n8n") || input.includes("workflow") || input.includes("integrate") || input.includes("connect")) {
-        botResponse = "We are experts in n8n and advanced workflow integration. We can connect your CRM, Social Ads, and WhatsApp into one cohesive engine. Are you looking to automate manual data entry or lead routing?";
+        botResponse = "We are experts in n8n and advanced workflow integration (starting at ₹5,000/mo). We can connect your CRM, Social Ads, and WhatsApp into one cohesive engine. Are you looking to automate manual data entry or lead routing?";
       } else if (input.includes("ads") || input.includes("marketing") || input.includes("facebook") || input.includes("google")) {
-        botResponse = "Our Social & Ad Automation funnels are designed for high conversion. We automate retargeting and lead syncing so no ad spend is wasted. Do you already have active campaigns running?";
+        botResponse = "Our Social & Ad Automation funnels (₹8,000 setup + ₹5,000/mo) are designed for high conversion. We automate retargeting and lead syncing so no ad spend is wasted. Do you already have active campaigns running?";
+      } else if (input.includes("crm") || input.includes("lead") || input.includes("track")) {
+        botResponse = "Our Lead Capture & CRM backends (starting at ₹3,000/mo) ensure no lead slips through the cracks. We use Google Sheets or lightweight CRMs with real-time triggers. How are you tracking leads right now?";
       } else if (input.includes("founder") || input.includes("divyansh") || input.includes("who built")) {
         botResponse = "Divhanya Modulers was founded by Divyansh Sharma, an AI & Data Science engineer from IIT Jodhpur. He built this system to democratize enterprise-grade automation for SMBs. Would you like to book an audit call with him?";
       } else if (input.includes("contact") || input.includes("call") || input.includes("whatsapp") || input.includes("number")) {
@@ -194,12 +196,15 @@ export default function Home() {
             {/* Connecting Line */}
             <div className="hidden md:block absolute top-[30px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent z-0" />
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4">
               {[
-                { name: "Consultation", icon: <Coffee className="w-6 h-6" />, desc: "We discuss your vision, requirements, and business goals." },
-                { name: "Strategy & Design", icon: <Users className="w-6 h-6" />, desc: "Our team crafts a blueprint and modern UI for your approval." },
-                { name: "Development", icon: <Code className="w-6 h-6" />, desc: "We build your solution using cutting-edge tech stacks." },
-                { name: "Launch", icon: <Rocket className="w-6 h-6" />, desc: "Deployment, testing, and handover. Your system goes live." }
+                { name: "Discovery", icon: <Coffee className="w-6 h-6" />, desc: "We understand your business needs." },
+                { name: "Audit & Plan", icon: <TrendingUp className="w-6 h-6" />, desc: "Complete analysis of current setup." },
+                { name: "Build", icon: <Code className="w-6 h-6" />, desc: "Custom automation infrastructure." },
+                { name: "Connect CRM", icon: <Users className="w-6 h-6" />, desc: "Seamless system integration." },
+                { name: "Optimize", icon: <Zap className="w-6 h-6" />, desc: "Rigorous testing and fine-tuning." },
+                { name: "Live & Grow", icon: <Rocket className="w-6 h-6" />, desc: "Launch your revenue system." },
+                { name: "Insights", icon: <ShieldCheck className="w-6 h-6" />, desc: "Weekly performance tracking." }
               ].map((step, i) => (
                 <motion.div 
                   key={step.name}
@@ -209,13 +214,13 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="relative z-10 flex flex-col items-center"
                 >
-                  <div className="w-16 h-16 rounded-full bg-black border border-secondary/30 flex items-center justify-center text-secondary shadow-[0_0_15px_rgba(157,0,255,0.2)] mb-8 group hover:scale-110 transition-transform cursor-default relative overflow-hidden">
+                  <div className="w-14 h-14 rounded-full bg-black border border-secondary/30 flex items-center justify-center text-secondary shadow-[0_0_15px_rgba(157,0,255,0.2)] mb-6 group hover:scale-110 transition-transform cursor-default relative overflow-hidden">
                     <div className="absolute inset-0 bg-secondary/5"></div>
                     <span className="relative z-10">{step.icon}</span>
                   </div>
-                  <div className="glass-card p-6 rounded-xl border border-white/5 w-full text-center">
-                    <h3 className="text-lg font-bold tracking-wider uppercase mb-3 text-white">{step.name}</h3>
-                    <p className="text-xs text-gray-500 leading-relaxed">{step.desc}</p>
+                  <div className="glass-card p-4 rounded-xl border border-white/5 w-full text-center">
+                    <h3 className="text-[10px] font-bold tracking-wider uppercase mb-2 text-white">{step.name}</h3>
+                    <p className="text-[9px] text-gray-500 leading-tight">{step.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -282,6 +287,13 @@ export default function Home() {
               icon="booking"
               delay={0.5}
             />
+            <ServiceCard 
+              title="Full Revenue Growth Stack"
+              price="Pro: ₹15,000/mo"
+              description="Everything in direct booking + workflow + chat + CRM + automation + ad sync. A true plug-and-play revenue system. Problem Solved: Need a complete revenue solution."
+              icon="rocket"
+              delay={0.6}
+            />
           </div>
         </div>
       </section>
@@ -339,6 +351,73 @@ export default function Home() {
                  </div>
                </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison Table Section */}
+      <section className="py-24 relative bg-black/40">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Transparent Pricing</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">Choose the plan that fits your business needs. All plans include setup, onboarding, and ongoing support.</p>
+          </div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse border border-white/10 rounded-xl overflow-hidden bg-zinc-900/30">
+              <thead>
+                <tr className="bg-primary/5">
+                  <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Service</th>
+                  <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Starter</th>
+                  <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Growth</th>
+                  <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Enterprise/Pro</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm text-gray-400">
+                <tr>
+                  <td className="p-4 border-b border-white/5 font-bold text-white">Direct Booking System</td>
+                  <td className="p-4 border-b border-white/5">₹4,500/mo</td>
+                  <td className="p-4 border-b border-white/5">₹7,000/mo</td>
+                  <td className="p-4 border-b border-white/5">₹10,000/mo</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-white/5 font-bold text-white">WhatsApp Automation</td>
+                  <td className="p-4 border-b border-white/5">₹3,500/mo</td>
+                  <td className="p-4 border-b border-white/5">₹6,000/mo</td>
+                  <td className="p-4 border-b border-white/5">—</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-white/5 font-bold text-white">Lead Capture & CRM</td>
+                  <td className="p-4 border-b border-white/5">₹3,000/mo</td>
+                  <td className="p-4 border-b border-white/5">₹5,000/mo</td>
+                  <td className="p-4 border-b border-white/5">—</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-white/5 font-bold text-white">n8n Workflow Integration</td>
+                  <td className="p-4 border-b border-white/5">₹5,000/mo</td>
+                  <td className="p-4 border-b border-white/5">₹8,000/mo</td>
+                  <td className="p-4 border-b border-white/5">—</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-white/5 font-bold text-white">Social & Ads Automation</td>
+                  <td className="p-4 border-b border-white/5">Setup: ₹8,000</td>
+                  <td className="p-4 border-b border-white/5">₹5,000/mo</td>
+                  <td className="p-4 border-b border-white/5">—</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-white/5 font-bold text-white">Appointment System</td>
+                  <td className="p-4 border-b border-white/5">₹4,000/mo</td>
+                  <td className="p-4 border-b border-white/5">₹7,000/mo</td>
+                  <td className="p-4 border-b border-white/5">—</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-white/5 font-bold text-white text-primary">Full Growth Stack</td>
+                  <td className="p-4 border-b border-white/5">—</td>
+                  <td className="p-4 border-b border-white/5">—</td>
+                  <td className="p-4 border-b border-white/5 font-bold text-primary">₹15,000/mo</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
