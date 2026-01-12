@@ -384,45 +384,45 @@ export default function Home() {
               <tbody className="text-sm text-gray-400">
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Direct Booking System</td>
-                  <td className="p-4 border-b border-white/5">₹1,499</td>
-                  <td className="p-4 border-b border-white/5">₹2,999</td>
-                  <td className="p-4 border-b border-white/5">₹4,999</td>
+                  <td className="p-4 border-b border-white/5">₹1,499<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹2,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹4,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">WhatsApp Automation</td>
-                  <td className="p-4 border-b border-white/5">₹999</td>
-                  <td className="p-4 border-b border-white/5">₹1,999</td>
-                  <td className="p-4 border-b border-white/5">₹3,499</td>
+                  <td className="p-4 border-b border-white/5">₹999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹1,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹3,499<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Lead Capture & CRM</td>
-                  <td className="p-4 border-b border-white/5">₹999</td>
-                  <td className="p-4 border-b border-white/5">₹1,999</td>
-                  <td className="p-4 border-b border-white/5">₹3,499</td>
+                  <td className="p-4 border-b border-white/5">₹999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹1,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹3,499<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">n8n Workflow Integration</td>
-                  <td className="p-4 border-b border-white/5">₹1,999</td>
-                  <td className="p-4 border-b border-white/5">₹3,999</td>
-                  <td className="p-4 border-b border-white/5">₹5,999</td>
+                  <td className="p-4 border-b border-white/5">₹1,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹3,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹5,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Social & Ads Automation</td>
                   <td className="p-4 border-b border-white/5">Setup: ₹2,999</td>
-                  <td className="p-4 border-b border-white/5">₹2,999</td>
-                  <td className="p-4 border-b border-white/5">₹4,999</td>
+                  <td className="p-4 border-b border-white/5">₹2,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹4,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Appointment System</td>
-                  <td className="p-4 border-b border-white/5">₹1,499</td>
-                  <td className="p-4 border-b border-white/5">₹2,999</td>
-                  <td className="p-4 border-b border-white/5">₹4,499</td>
+                  <td className="p-4 border-b border-white/5">₹1,499<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹2,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
+                  <td className="p-4 border-b border-white/5">₹4,499<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white text-primary">Full Growth Stack</td>
                   <td className="p-4 border-b border-white/5">—</td>
                   <td className="p-4 border-b border-white/5">—</td>
-                  <td className="p-4 border-b border-white/5 font-bold text-primary">₹8,999</td>
+                  <td className="p-4 border-b border-white/5 font-bold text-primary">₹8,999<span className="text-[10px] ml-0.5 opacity-70">/month</span></td>
                 </tr>
               </tbody>
             </table>
