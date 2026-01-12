@@ -510,7 +510,7 @@ export default function Home() {
               </div>
 
               <div className="flex gap-6 mt-12">
-                <a href="https://www.linkedin.com/in/divyansh-sharma-a92889340" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https://www.linkedin.com/in/divhanya-modulers-ai-automations-and-technologies-19a4373a4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a href="https://twitter.com/Divyansh_shar24" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
