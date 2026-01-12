@@ -513,10 +513,10 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/divyansh-sharma-a92889340" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
-                <a href="https://twitter.com/divhanyamods" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https://twitter.com/Divyansh_shar24" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Twitter className="w-6 h-6" />
                 </a>
-                <a href="https://instagram.com/divhanyamodulers.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https://instagram.com/div.sharma24" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
               </div>
