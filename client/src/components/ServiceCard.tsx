@@ -92,7 +92,6 @@ export function ServiceCard({ title, price, description, icon, delay }: ServiceP
         <div className="text-xl font-bold text-white mb-8 border-b border-white/10 pb-4">
           <span className="text-sm font-medium text-gray-400 mr-2">Starter:</span>
           {price.replace("Starter: ", "")}
-          <span className="text-xs text-gray-500 ml-1 font-normal italic">/ month</span>
         </div>
         
         <div className="space-y-4 mb-10 flex-grow">

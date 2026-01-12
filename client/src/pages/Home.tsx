@@ -60,17 +60,17 @@ export default function Home() {
       if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
         botResponse = "Hi there! 👋 I'm Divhanya's AI Assistant. I help businesses like yours automate complex workflows and recover lost revenue. What type of business are you looking to transform today?";
       } else if (input.includes("hotel") || input.includes("resort") || input.includes("booking")) {
-        botResponse = "For Hotels & Resorts, we implement a Direct Booking Revenue Infrastructure. It bypasses OTA commissions (saving you 20-40%) and uses WhatsApp triggers for instant guest engagement. Our starter plan begins at ₹4,500/mo. Would you like to see the full feature list?";
+        botResponse = "For Hotels & Resorts, we implement a Direct Booking Revenue Infrastructure. It bypasses OTA commissions (saving you 20-40%) and uses WhatsApp triggers for instant guest engagement. Our starter plan begins at ₹1,499. Would you like to see the full feature list?";
       } else if (input.includes("clinic") || input.includes("doctor") || input.includes("dentist") || input.includes("appointment")) {
-        botResponse = "Our 360° Appointment Booking System (starting at ₹4,000/mo) is perfect for healthcare. It automates the journey from lead capture to follow-up, significantly reducing no-shows. How many appointments are you currently managing daily?";
+        botResponse = "Our 360° Appointment Booking System (starting at ₹1,499) is perfect for healthcare. It automates the journey from lead capture to follow-up, significantly reducing no-shows. How many appointments are you currently managing daily?";
       } else if (input.includes("price") || input.includes("cost") || input.includes("how much") || input.includes("subscription")) {
-        botResponse = "We have transparent tiered pricing:\n• Starter Plans: ₹3,000 - ₹5,000/mo\n• Growth Plans: ₹5,000 - ₹8,000/mo\n• Full Stack Pro: ₹15,000/mo\n\nAll plans include setup and ongoing support. Which plan sounds right for your scale?";
+        botResponse = "We have transparent tiered pricing:\n• Starter Plans: ₹999 - ₹1,999\n• Growth Plans: ₹1,999 - ₹3,999\n• Full Stack Pro: ₹8,999\n\nAll plans include setup and ongoing support. Which plan sounds right for your scale?";
       } else if (input.includes("n8n") || input.includes("workflow") || input.includes("integrate") || input.includes("connect")) {
-        botResponse = "We are experts in n8n and advanced workflow integration (starting at ₹5,000/mo). We can connect your CRM, Social Ads, and WhatsApp into one cohesive engine. Are you looking to automate manual data entry or lead routing?";
+        botResponse = "We are experts in n8n and advanced workflow integration (starting at ₹1,999). We can connect your CRM, Social Ads, and WhatsApp into one cohesive engine. Are you looking to automate manual data entry or lead routing?";
       } else if (input.includes("ads") || input.includes("marketing") || input.includes("facebook") || input.includes("google")) {
-        botResponse = "Our Social & Ad Automation funnels (₹8,000 setup + ₹5,000/mo) are designed for high conversion. We automate retargeting and lead syncing so no ad spend is wasted. Do you already have active campaigns running?";
+        botResponse = "Our Social & Ad Automation funnels (₹2,999 setup + ₹2,999 monthly) are designed for high conversion. We automate retargeting and lead syncing so no ad spend is wasted. Do you already have active campaigns running?";
       } else if (input.includes("crm") || input.includes("lead") || input.includes("track")) {
-        botResponse = "Our Lead Capture & CRM backends (starting at ₹3,000/mo) ensure no lead slips through the cracks. We use Google Sheets or lightweight CRMs with real-time triggers. How are you tracking leads right now?";
+        botResponse = "Our Lead Capture & CRM backends (starting at ₹999) ensure no lead slips through the cracks. We use Google Sheets or lightweight CRMs with real-time triggers. How are you tracking leads right now?";
       } else if (input.includes("founder") || input.includes("divyansh") || input.includes("who built")) {
         botResponse = "Divhanya Modulers was founded by Divyansh Sharma, an AI & Data Science engineer from IIT Jodhpur. He built this system to democratize enterprise-grade automation for SMBs. Would you like to book an audit call with him?";
       } else if (input.includes("contact") || input.includes("call") || input.includes("whatsapp") || input.includes("number")) {
@@ -255,28 +255,28 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard 
               title="Direct Booking Revenue Infrastructure"
-              price="Starter: ₹1,499/mo"
+              price="Starter: ₹1,499"
               description="Mobile-first direct booking page connected to automation backend. Includes interactive mobile UI, live offers, WhatsApp triggers, guest trust blocks, and full workflow automation. Problem Solved: Hotels lose 20–40% revenue to third-party platforms. We bring direct bookings home."
               icon="hotel"
               delay={0}
             />
             <ServiceCard 
               title="WhatsApp & Chat Workflow Automation"
-              price="Starter: ₹999/mo"
+              price="Starter: ₹999"
               description="Automated conversation flows, instant replies, enquiry categorization, follow-ups, and CRM sync. Includes smart auto-replies, missed-call triggers, and full chat history tracking. Problem Solved: Businesses miss inquiries due to slow replies."
               icon="whatsapp"
               delay={0.1}
             />
             <ServiceCard 
               title="Lead Capture & CRM Backends"
-              price="Starter: ₹999/mo"
+              price="Starter: ₹999"
               description="Google Sheets or lightweight CRM backend tracking every lead source—forms, calls, landing pages. Real-time updates, lead scoring, and weekly performance reports. Problem Solved: Leads slip through cracks → lost revenue."
               icon="crm"
               delay={0.2}
             />
             <ServiceCard 
               title="N8N Workflow Integrations (Smart Connectors)"
-              price="Starter: ₹1,999/mo"
+              price="Starter: ₹1,999"
               description="Data sync pipelines and trigger-based workflows connecting forms, CRM, WhatsApp, ads, and more into a single automated engine. Problem Solved: Manual tasks slow business growth."
               icon="workflow"
               delay={0.3}
@@ -290,14 +290,14 @@ export default function Home() {
             />
             <ServiceCard 
               title="360° Appointment Booking System"
-              price="Starter: ₹1,499/mo"
+              price="Starter: ₹1,499"
               description="Automated booking journey for healthcare & service firms—form → WhatsApp → confirmation → reminders → follow-ups. Includes patient tagging and recovery systems. Problem Solved: No shows & manual appointment chaos."
               icon="booking"
               delay={0.5}
             />
             <ServiceCard 
               title="Full Revenue Growth Stack"
-              price="Pro: ₹8,999/mo"
+              price="Pro: ₹8,999"
               description="Everything in direct booking + workflow + chat + CRM + automation + ad sync. A true plug-and-play revenue system. Problem Solved: Need a complete revenue solution."
               icon="full"
               delay={0.6}
@@ -384,45 +384,45 @@ export default function Home() {
               <tbody className="text-sm text-gray-400">
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Direct Booking System</td>
-                  <td className="p-4 border-b border-white/5">₹1,499/mo</td>
-                  <td className="p-4 border-b border-white/5">₹2,999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹4,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹1,499</td>
+                  <td className="p-4 border-b border-white/5">₹2,999</td>
+                  <td className="p-4 border-b border-white/5">₹4,999</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">WhatsApp Automation</td>
-                  <td className="p-4 border-b border-white/5">₹999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹1,999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹3,499/mo</td>
+                  <td className="p-4 border-b border-white/5">₹999</td>
+                  <td className="p-4 border-b border-white/5">₹1,999</td>
+                  <td className="p-4 border-b border-white/5">₹3,499</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Lead Capture & CRM</td>
-                  <td className="p-4 border-b border-white/5">₹999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹1,999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹3,499/mo</td>
+                  <td className="p-4 border-b border-white/5">₹999</td>
+                  <td className="p-4 border-b border-white/5">₹1,999</td>
+                  <td className="p-4 border-b border-white/5">₹3,499</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">n8n Workflow Integration</td>
-                  <td className="p-4 border-b border-white/5">₹1,999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹3,999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹5,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹1,999</td>
+                  <td className="p-4 border-b border-white/5">₹3,999</td>
+                  <td className="p-4 border-b border-white/5">₹5,999</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Social & Ads Automation</td>
                   <td className="p-4 border-b border-white/5">Setup: ₹2,999</td>
-                  <td className="p-4 border-b border-white/5">₹2,999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹4,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹2,999</td>
+                  <td className="p-4 border-b border-white/5">₹4,999</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Appointment System</td>
-                  <td className="p-4 border-b border-white/5">₹1,499/mo</td>
-                  <td className="p-4 border-b border-white/5">₹2,999/mo</td>
-                  <td className="p-4 border-b border-white/5">₹4,499/mo</td>
+                  <td className="p-4 border-b border-white/5">₹1,499</td>
+                  <td className="p-4 border-b border-white/5">₹2,999</td>
+                  <td className="p-4 border-b border-white/5">₹4,499</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white text-primary">Full Growth Stack</td>
                   <td className="p-4 border-b border-white/5">—</td>
                   <td className="p-4 border-b border-white/5">—</td>
-                  <td className="p-4 border-b border-white/5 font-bold text-primary">₹8,999/mo</td>
+                  <td className="p-4 border-b border-white/5 font-bold text-primary">₹8,999</td>
                 </tr>
               </tbody>
             </table>
