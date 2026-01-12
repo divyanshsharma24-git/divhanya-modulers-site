@@ -255,49 +255,49 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard 
               title="Direct Booking Revenue Infrastructure"
-              price="Starter: ₹4,500/mo"
+              price="Starter: ₹1,499/mo"
               description="Mobile-first direct booking page connected to automation backend. Includes interactive mobile UI, live offers, WhatsApp triggers, guest trust blocks, and full workflow automation. Problem Solved: Hotels lose 20–40% revenue to third-party platforms. We bring direct bookings home."
               icon="hotel"
               delay={0}
             />
             <ServiceCard 
               title="WhatsApp & Chat Workflow Automation"
-              price="Starter: ₹3,500/mo"
+              price="Starter: ₹999/mo"
               description="Automated conversation flows, instant replies, enquiry categorization, follow-ups, and CRM sync. Includes smart auto-replies, missed-call triggers, and full chat history tracking. Problem Solved: Businesses miss inquiries due to slow replies."
               icon="whatsapp"
               delay={0.1}
             />
             <ServiceCard 
               title="Lead Capture & CRM Backends"
-              price="Starter: ₹3,000/mo"
+              price="Starter: ₹999/mo"
               description="Google Sheets or lightweight CRM backend tracking every lead source—forms, calls, landing pages. Real-time updates, lead scoring, and weekly performance reports. Problem Solved: Leads slip through cracks → lost revenue."
               icon="crm"
               delay={0.2}
             />
             <ServiceCard 
               title="N8N Workflow Integrations (Smart Connectors)"
-              price="Starter: ₹5,000/mo"
+              price="Starter: ₹1,999/mo"
               description="Data sync pipelines and trigger-based workflows connecting forms, CRM, WhatsApp, ads, and more into a single automated engine. Problem Solved: Manual tasks slow business growth."
               icon="workflow"
               delay={0.3}
             />
             <ServiceCard 
               title="Social & Ads Automation (Performance Funnels)"
-              price="Setup: ₹8,000"
+              price="Setup: ₹2,999"
               description="Automate ad triggers, creative refresh workflows, lead syncing, and retargeting sequences across Google and Meta platforms. Problem Solved: Manual ad campaigns cost time & money."
               icon="ads"
               delay={0.4}
             />
             <ServiceCard 
               title="360° Appointment Booking System"
-              price="Starter: ₹4,000/mo"
+              price="Starter: ₹1,499/mo"
               description="Automated booking journey for healthcare & service firms—form → WhatsApp → confirmation → reminders → follow-ups. Includes patient tagging and recovery systems. Problem Solved: No shows & manual appointment chaos."
               icon="booking"
               delay={0.5}
             />
             <ServiceCard 
               title="Full Revenue Growth Stack"
-              price="Pro: ₹15,000/mo"
+              price="Pro: ₹8,999/mo"
               description="Everything in direct booking + workflow + chat + CRM + automation + ad sync. A true plug-and-play revenue system. Problem Solved: Need a complete revenue solution."
               icon="full"
               delay={0.6}
@@ -367,7 +367,7 @@ export default function Home() {
       <section className="py-24 relative bg-black/40">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Transparent Pricing</h2>
+            <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Market-Entry Pricing (Conversion Optimized)</h2>
             <p className="text-gray-500 max-w-2xl mx-auto">Choose the plan that fits your business needs. All plans include setup, onboarding, and ongoing support.</p>
           </div>
           
@@ -378,51 +378,51 @@ export default function Home() {
                   <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Service</th>
                   <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Starter</th>
                   <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Growth</th>
-                  <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Enterprise/Pro</th>
+                  <th className="p-4 border-b border-white/10 text-xs font-bold uppercase tracking-widest text-primary">Pro</th>
                 </tr>
               </thead>
               <tbody className="text-sm text-gray-400">
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Direct Booking System</td>
-                  <td className="p-4 border-b border-white/5">₹4,500/mo</td>
-                  <td className="p-4 border-b border-white/5">₹7,000/mo</td>
-                  <td className="p-4 border-b border-white/5">₹10,000/mo</td>
+                  <td className="p-4 border-b border-white/5">₹1,499/mo</td>
+                  <td className="p-4 border-b border-white/5">₹2,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹4,999/mo</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">WhatsApp Automation</td>
-                  <td className="p-4 border-b border-white/5">₹3,500/mo</td>
-                  <td className="p-4 border-b border-white/5">₹6,000/mo</td>
-                  <td className="p-4 border-b border-white/5">—</td>
+                  <td className="p-4 border-b border-white/5">₹999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹1,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹3,499/mo</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Lead Capture & CRM</td>
-                  <td className="p-4 border-b border-white/5">₹3,000/mo</td>
-                  <td className="p-4 border-b border-white/5">₹5,000/mo</td>
-                  <td className="p-4 border-b border-white/5">—</td>
+                  <td className="p-4 border-b border-white/5">₹999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹1,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹3,499/mo</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">n8n Workflow Integration</td>
-                  <td className="p-4 border-b border-white/5">₹5,000/mo</td>
-                  <td className="p-4 border-b border-white/5">₹8,000/mo</td>
-                  <td className="p-4 border-b border-white/5">—</td>
+                  <td className="p-4 border-b border-white/5">₹1,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹3,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹5,999/mo</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Social & Ads Automation</td>
-                  <td className="p-4 border-b border-white/5">Setup: ₹8,000</td>
-                  <td className="p-4 border-b border-white/5">₹5,000/mo</td>
-                  <td className="p-4 border-b border-white/5">—</td>
+                  <td className="p-4 border-b border-white/5">Setup: ₹2,999</td>
+                  <td className="p-4 border-b border-white/5">₹2,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹4,999/mo</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white">Appointment System</td>
-                  <td className="p-4 border-b border-white/5">₹4,000/mo</td>
-                  <td className="p-4 border-b border-white/5">₹7,000/mo</td>
-                  <td className="p-4 border-b border-white/5">—</td>
+                  <td className="p-4 border-b border-white/5">₹1,499/mo</td>
+                  <td className="p-4 border-b border-white/5">₹2,999/mo</td>
+                  <td className="p-4 border-b border-white/5">₹4,499/mo</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-white/5 font-bold text-white text-primary">Full Growth Stack</td>
                   <td className="p-4 border-b border-white/5">—</td>
                   <td className="p-4 border-b border-white/5">—</td>
-                  <td className="p-4 border-b border-white/5 font-bold text-primary">₹15,000/mo</td>
+                  <td className="p-4 border-b border-white/5 font-bold text-primary">₹8,999/mo</td>
                 </tr>
               </tbody>
             </table>
@@ -510,7 +510,7 @@ export default function Home() {
               </div>
 
               <div className="flex gap-6 mt-12">
-                <a href="https://www.linkedin.com/in/divhanya-modulers-ai-automations-and-technologies-19a4373a4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https://www.linkedin.com/in/divyansh-sharma-a92889340" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a href="https://twitter.com/Divyansh_shar24" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
