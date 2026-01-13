@@ -2,44 +2,86 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertLeadSchema, type InsertLead } from "@shared/schema";
 import { useCreateLead } from "@/hooks/use-leads";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Loader2, Send } from "lucide-react";
 
 export function ContactForm() {
   const { mutate, isPending } = useCreateLead();
-  
+
   const form = useForm<InsertLead>({
     resolver: zodResolver(insertLeadSchema),
     defaultValues: {
       name: "",
       businessType: "",
-      contactNumber: "",
-      whatsappNumber: "",
+      phone: "",
+      whatsapp: "",
       email: "",
-      inquiry: "",
+      message: "",
       source: "website",
     },
   });
 
-  function onSubmit(data: InsertLead) {
-    mutate(data, {
-      onSuccess: () => {
-        form.reset();
-      },
-    });
+  async function onSubmit(data: InsertLead) {
+    try {
+      // Keep your existing backend flow
+      mutate(data, {
+        onSuccess: () => {
+          form.reset();
+        },
+      });
+
+      // Send lead to Google Sheets backend
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbw_wa6FSkdWcXy9wI548SmAKCuU26uMjxohI4Nw245dOLAK3u9_rNS6N2k33sbpvr5gKw/exec",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone: data.contactNumber,
+            whatsapp: data.whatsappNumber,
+            businessType: data.businessType,
+            message: data.inquiry,
+            page: window.location.pathname,
+          }),
+        },
+      );
+
+      alert("Thanks! Your request has been received.");
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    }
   }
 
   return (
     <div className="glass-card p-6 md:p-8 rounded-2xl relative overflow-hidden">
       <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-      
+
       <div className="mb-8">
-        <h3 className="text-2xl font-bold font-display text-white mb-2">Start Your Transformation</h3>
-        <p className="text-muted-foreground">Fill out the form below to book your growth audit.</p>
+        <h3 className="text-2xl font-bold font-display text-white mb-2">
+          Start Your Transformation
+        </h3>
+        <p className="text-muted-foreground">
+          Fill out the form below to book your growth audit.
+        </p>
       </div>
 
       <Form {...form}>
@@ -52,20 +94,27 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" className="bg-black/20 border-white/10 focus:border-primary/50" {...field} />
+                    <Input
+                      placeholder="John Doe"
+                      className="bg-black/20 border-white/10 focus:border-primary/50"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="businessType"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Business Type</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value || undefined}>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value || undefined}
+                  >
                     <FormControl>
                       <SelectTrigger className="bg-black/20 border-white/10 focus:border-primary/50">
                         <SelectValue placeholder="Select type" />
@@ -94,7 +143,11 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Phone Number</FormLabel>
                   <FormControl>
-                    <Input placeholder="+91..." className="bg-black/20 border-white/10 focus:border-primary/50" {...field} />
+                    <Input
+                      placeholder="+91..."
+                      className="bg-black/20 border-white/10 focus:border-primary/50"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -108,7 +161,12 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>WhatsApp Number</FormLabel>
                   <FormControl>
-                    <Input placeholder="+91..." className="bg-black/20 border-white/10 focus:border-primary/50" {...field} value={field.value || ""} />
+                    <Input
+                      placeholder="+91..."
+                      className="bg-black/20 border-white/10 focus:border-primary/50"
+                      {...field}
+                      value={field.value || ""}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -123,7 +181,13 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Email Address</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="john@company.com" className="bg-black/20 border-white/10 focus:border-primary/50" {...field} value={field.value || ""} />
+                  <Input
+                    type="email"
+                    placeholder="john@company.com"
+                    className="bg-black/20 border-white/10 focus:border-primary/50"
+                    {...field}
+                    value={field.value || ""}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -137,10 +201,10 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>How can we help?</FormLabel>
                 <FormControl>
-                  <Textarea 
-                    placeholder="Tell us about your automation needs..." 
-                    className="bg-black/20 border-white/10 focus:border-primary/50 min-h-[100px]" 
-                    {...field} 
+                  <Textarea
+                    placeholder="Tell us about your automation needs..."
+                    className="bg-black/20 border-white/10 focus:border-primary/50 min-h-[100px]"
+                    {...field}
                     value={field.value || ""}
                   />
                 </FormControl>
@@ -149,8 +213,8 @@ export function ContactForm() {
             )}
           />
 
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             disabled={isPending}
             className="w-full py-6 text-lg font-bold bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-black shadow-lg shadow-primary/20"
           >
