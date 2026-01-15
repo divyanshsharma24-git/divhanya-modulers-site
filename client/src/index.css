@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Futuristic Theme */
+  --background: 240 10% 4%; /* #09090b */
+  --foreground: 0 0% 98%;   /* #fafafa */
+  
+  /* Neon Cyan Primary */
+  --primary: 180 100% 50%;  /* #00ffff */
+  --primary-foreground: 240 10% 3.9%;
+
+  /* Neon Purple Secondary/Accent */
+  --secondary: 270 100% 60%; /* #9d00ff */
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+
+  --accent: 270 100% 60%;
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 180 100% 50%;
+
+  --radius: 0.5rem;
+  
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-wider;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  }
+
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+  
+  .glass-card {
+    @apply bg-black/40 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+
+  .neon-button {
+    @apply relative overflow-hidden transition-all duration-300;
+    box-shadow: 0 0 10px theme('colors.primary.DEFAULT'), inset 0 0 5px theme('colors.primary.DEFAULT');
+  }
+  
+  .neon-button:hover {
+    box-shadow: 0 0 20px theme('colors.primary.DEFAULT'), inset 0 0 10px theme('colors.primary.DEFAULT');
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background)); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted)); 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary)); 
+}
