@@ -1,0 +1,137 @@
+You are a senior production engineer.
+
+Refactor my existing Divhanya Modulers website project into a pure static Netlify-compatible build.
+
+CRITICAL REQUIREMENTS
+
+NO server
+
+NO backend runtime
+
+NO node build on Netlify
+
+Must run by simple HTML + CSS + JS upload
+
+Final project must be deployable by drag-and-drop ZIP to Netlify
+
+📁 REQUIRED FINAL FOLDER STRUCTURE
+
+Create exactly this at project root:
+
+/
+  index.html
+  assets/
+    css/
+      style.css
+    js/
+      main.js
+    images/
+      logo.png
+      founder.jpg
+
+
+Everything must load using relative paths only
+Example:
+
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js"></script>
+<img src="assets/images/logo.png">
+
+🧠 FEATURES TO KEEP
+
+Do NOT change UI / layout / theme.
+Only refactor structure.
+
+Must include:
+
+Hero section
+
+Services
+
+Founder Section (Divyansh Sharma)
+
+Contact Form
+
+WhatsApp CTA
+
+Glassmorphism styling
+
+Animations
+
+AI futuristic design
+
+FAQ
+
+Chatbot UI placeholder
+
+📋 CONTACT FORM (NO BACKEND)
+
+Replace backend logic with this:
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+    method: "POST",
+    body: new FormData(this)
+  }).then(() => alert("Thank you! We will contact you shortly."));
+});
+
+🛑 REMOVE ALL OF THIS
+
+Delete completely:
+
+NodeJS
+
+Vite
+
+React
+
+Typescript
+
+npm
+
+dist/
+
+server/
+
+build scripts
+
+
+INTERFACE FREEZE GUARANTEE – ADD THIS FIRST
+
+DO NOT CHANGE EVEN A SINGLE PIXEL OF MY UI.
+
+You are only allowed to restructure files and paths.
+
+NO layout changes
+
+NO color changes
+
+NO animation changes
+
+NO font changes
+
+NO spacing changes
+
+NO new components
+
+The website must look 100% identical after restructuring.
+
+
+
+
+
+
+
+
+
+
+🧪 VALIDATION
+
+Open index.html locally — must work without errors.
+
+🎯 END RESULT
+
+Website must go live on Netlify by:
+
+drag & drop ZIP only. No build.
