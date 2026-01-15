@@ -1,0 +1,1 @@
+console.log('Divhanya Modulers Static initialized');
