@@ -74,7 +74,7 @@ export default function Home() {
       } else if (input.includes("founder") || input.includes("divyansh") || input.includes("who built")) {
         botResponse = "Divhanya Modulers was founded by Divyansh Sharma, an AI & Data Science engineer from IIT Jodhpur. He built this system to democratize enterprise-grade automation for SMBs. Would you like to book an audit call with him?";
       } else if (input.includes("contact") || input.includes("call") || input.includes("whatsapp") || input.includes("number")) {
-        botResponse = "You can reach our team at +91 8077073548 or via email at divhanyamodulers@gmail.com. Alternatively, I can take your number here and have a specialist call you back?";
+        botResponse = "You can reach our team at +91 9068749904 or via email at divhanyamodulers@gmail.com. Alternatively, I can take your number here and have a specialist call you back?";
       } else {
         botResponse = "That's interesting! 🧠 Our systems are highly customizable. To give you the best advice, could you tell me: 1) Your business type, 2) Your monthly inquiry volume, and 3) The biggest bottleneck you're facing right now?";
       }
@@ -675,7 +675,7 @@ export default function Home() {
           </motion.button>
 
           <motion.a
-            href="https://wa.me/918077073548"
+            href="https://wa.me/919068749904"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
